@@ -210,7 +210,7 @@ nav {
 
 footer {
     background: var(--brand-dark-blue);
-    padding: 19px 0;
+    padding: 19px 0 10px;
 }
 
 footer a {
