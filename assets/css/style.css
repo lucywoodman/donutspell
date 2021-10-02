@@ -226,3 +226,22 @@ footer a {
     display: flex;
     list-style-type: none;
 }
+
+/* || HOME - Main Content */
+
+.home-main {
+    max-width: 128rem;
+    margin: 0 auto;
+    background: url("../images/background-home.svg") no-repeat bottom center / 80%;
+}
+
+.ripley {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+}
+
+#ripley {
+    z-index: 1;
+}
