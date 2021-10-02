@@ -1,0 +1,112 @@
+/* Import Google Fonts: Nunito, Poppins, Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Nunito:wght@700;900&family=Poppins:wght@400;700&display=swap');
+
+/* || GLOBAL STYLING */
+:root {
+    /* Set root font size to 8px for small screens */
+    font-size: 50%;
+
+    /* || Fonts */
+    --font-head: 'Nunito', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    --font-game: 'Fira Code', monospace;
+
+    /* || Font sizes */
+    --font-size-lg: 2.2rem;
+    --font-size-md: 2.1rem;
+    --font-size-sm: 1.8rem;
+    --font-size-game: 5.6rem;
+
+    /* || Font weights */
+    --font-weight-black: 900;
+    --font-weight-bold: 700;
+    --font-weight-reg: 400;
+
+    /* || Line height */
+    --line-height-lg: 2;
+    --line-height-md: 1.75;
+    --line-height-sm: 1.5;
+    --line-height-xsm: 1.44;
+
+    /* || Colours */
+    --brand-background: hsla(189, 90%, 80%, 1);
+    --brand-turquoise: hsla(189, 65%, 58%, 1);
+    --brand-yellow: hsla(45, 99%, 54%, 1);
+    --brand-orange: hsla(16, 88%, 58%, 1);
+    --brand-green: hsla(70, 66%, 51%, 1);
+    --brand-purple: hsla(292, 29%, 64%, 1);
+    --brand-dark-blue: hsla(235, 20%, 34%, 1);
+    --text-color: #111111;
+    --neutral-grey: #727578;
+    --neutral-light-grey: #ebebeb;
+    --white: #fffefe;
+    
+    /* || Sizing */
+    --width-xlg: 62rem;
+    --width-lg: 51rem;
+    --width-md: 40rem;
+    --width-sm: 29rem;
+
+    /* || Spacing */
+    --spacing-xlg: 16rem;
+    --spacing-lg: 12rem;
+    --spacing-md: 6rem;
+    --spacing-sm: 3rem;
+}
+
+@media all and (min-width: 1024px) {
+    :root {
+        /* Set root font size to 10px for large screens */
+        font-size: 62.5%;    
+    }       
+}
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+    background: var(--brand-background);
+    color: var(--text-color);
+}
+
+/* || TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-head);
+    font-weight: var(--font-weight-black);
+}
+
+h1 {
+    font-size: 6.74rem;
+    line-height: var(--line-height-xsm);
+}
+
+h2 { 
+    font-size: 5.05rem; 
+}
+
+h3,
+.h3 { 
+    font-size: 3.79rem; 
+}
+
+h4,
+.h4 {
+    font-size: 2.84rem;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-lg);
+}
+
+p {
+    max-width: var(--width-lg);
+    margin: 3rem 0;
+}
