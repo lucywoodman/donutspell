@@ -258,16 +258,18 @@ footer a {
     margin: 0 auto;
     background: url("../images/background-home.svg") no-repeat bottom center / 80%;
     width: 100%;
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-sm) 0;
 }
 
 .content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .content__intro {
     max-width: var(--width-lg);
+    padding: var(--spacing-sm);
 }
 
 .content__intro h2 {
@@ -278,6 +280,7 @@ footer a {
     background: var(--white);
     padding: var(--spacing-sm);
     border-radius: 12px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .content__level p {
@@ -305,22 +308,27 @@ footer a {
 .ripley {
     display: flex;
     justify-content: center;
-    position: relative;
-    bottom: -17px;
 }
 
 #ripley {
     z-index: 1;
     width: 120px;
+    position: relative;
+    bottom: -42px;
 }
 
 @media all and (min-width: 1024px) {
-    .ripley {
-        bottom: -30px;
+    .home-main {
+        padding: var(--spacing-md) 0 0 0;
+    }
+
+    .content {
+        flex-direction: row;
     }
 
     #ripley {
         width: 212px;
         height: auto;
+        bottom: -32px;
     }
 }
