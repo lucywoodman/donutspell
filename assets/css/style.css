@@ -127,7 +127,7 @@ a {
 
 a:hover,
 a:active {
-    color: var(--brand-turquoise);
+    color: var(--brand-background);
 }
 
 .button {
@@ -283,6 +283,11 @@ footer a {
 
 #medium {
     background: var(--brand-purple);
+}
+
+#easy:hover,
+#medium:hover {
+    background: var(--brand-dark-blue);
 }
 
 .ripley {
