@@ -239,9 +239,21 @@ footer a {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 30px;
+    top: 17px;
 }
 
 #ripley {
     z-index: 1;
+    width: 120px;
+}
+
+@media all and (min-width: 1024px) {
+    .ripley {
+        top: 30px;
+    }
+
+    #ripley {
+        width: 212px;
+        height: auto;
+    }
 }
