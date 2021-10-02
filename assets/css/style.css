@@ -110,3 +110,91 @@ p {
     max-width: var(--width-lg);
     margin: 3rem 0;
 }
+
+/* || Links */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all .3s ease-out;
+    padding: 1rem 2rem;
+}
+
+a:hover,
+a:active {
+    color: var(--brand-turquoise);
+}
+
+/* || HEADER */
+header {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+#logo {
+    width: 100%;
+    margin: 15px 0;
+}
+
+#logo h1 {
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+#logo h1 img {
+    width: 3.5rem;
+    height: auto;
+    position: relative;
+    top: 4px;
+}
+
+/*|| Main navigation */
+
+nav {
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nav__item a {
+    display: block;
+    padding: 15px;
+}
+
+.nav__item--active a {
+    color: var(--brand-orange);
+}
+
+.nav__item--active a:hover {
+    color: var(--brand-turquoise);
+}
+
+.active .nav__item {
+    display: block;
+}
+
+@media all and (min-width: 1024px) {
+    header {
+        flex-direction: row;
+        max-width: 92rem;
+        margin: var(--spacing-sm) auto;
+        border-radius: 12px;
+    }
+
+    #logo {
+        width: 40%;
+    }
+
+    #logo h1 {
+        text-align: left;
+    }
+    
+    .nav {
+        justify-content: flex-end;
+        padding: 10px 10px 5px 0;
+    }
+}
