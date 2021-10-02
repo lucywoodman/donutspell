@@ -114,7 +114,7 @@ h4,
 
 p {
     max-width: var(--width-lg);
-    margin: 3rem 0;
+    margin: 0 0 3rem 0;
 }
 
 /* || Links */
@@ -128,6 +128,22 @@ a {
 a:hover,
 a:active {
     color: var(--brand-turquoise);
+}
+
+.button {
+    padding: 2.2rem 3rem 2.2rem;
+    border-radius: 12px;
+    font-weight: var(--font-weight-bold);
+    background: var(--brand-orange);
+    cursor: pointer;
+    transition: all .3s ease-out;
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: var(--brand-dark-blue);
 }
 
 /* || HEADER */
@@ -240,6 +256,33 @@ footer a {
     max-width: 128rem;
     margin: 0 auto;
     background: url("../images/background-home.svg") no-repeat bottom center / 80%;
+}
+
+.content {
+    display: flex;
+}
+
+.content__level {
+    background: var(--white);
+    padding: var(--spacing-sm);
+    border-radius: 12px;
+}
+
+.content__level p {
+    font-weight: var(--font-weight-bold);
+}
+
+.content__level .button {
+    display: block;
+    margin-bottom: 3rem;
+}
+
+#easy {
+    background: var(--brand-turquoise);
+}
+
+#medium {
+    background: var(--brand-purple);
 }
 
 .ripley {
