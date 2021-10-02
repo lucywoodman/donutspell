@@ -98,6 +98,7 @@ h1 {
 
 h2 { 
     font-size: 5.05rem; 
+    line-height: var(--line-height-sm);
 }
 
 h3,
@@ -253,13 +254,24 @@ footer a {
 /* || HOME - Main Content */
 
 .home-main {
-    max-width: 128rem;
+    max-width: 110rem;
     margin: 0 auto;
     background: url("../images/background-home.svg") no-repeat bottom center / 80%;
+    width: 100%;
+    padding: var(--spacing-md) 0;
 }
 
 .content {
     display: flex;
+    justify-content: space-between;
+}
+
+.content__intro {
+    max-width: var(--width-lg);
+}
+
+.content__intro h2 {
+    margin-bottom: var(--spacing-sm);
 }
 
 .content__level {
