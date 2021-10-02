@@ -76,6 +76,12 @@ body {
     color: var(--text-color);
 }
 
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 /* || TYPOGRAPHY */
 h1,
 h2,
@@ -126,6 +132,7 @@ a:active {
 
 /* || HEADER */
 header {
+    width: 100%;
     background-color: var(--white);
     display: flex;
     flex-direction: column;
@@ -197,4 +204,25 @@ nav {
         justify-content: flex-end;
         padding: 10px 10px 5px 0;
     }
+}
+
+/* || FOOTER */
+
+footer {
+    background: var(--brand-dark-blue);
+    padding: 19px 0;
+}
+
+footer a {
+    color: var(--white);
+}
+
+.social {
+    max-width: 128rem;
+    margin: 0 auto;
+}
+
+.social__links {
+    display: flex;
+    list-style-type: none;
 }
