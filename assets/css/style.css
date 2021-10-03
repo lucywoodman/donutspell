@@ -326,6 +326,10 @@ footer a {
         flex-direction: row;
     }
 
+    .content__level {
+        margin-bottom: 0;
+    }
+
     #ripley {
         width: 212px;
         height: auto;
