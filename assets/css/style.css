@@ -131,7 +131,7 @@ h4 {
 }
 
 p {
-    max-width: var(--width-lg);
+    max-width: var(--width-xlg);
     margin: 0 0 3rem 0;
 }
 
@@ -285,7 +285,10 @@ footer a {
 }
 
 .content__intro {
-    max-width: var(--width-lg);
+    max-width: var(--width-xlg);
+}
+
+.content > .content__intro {
     padding: var(--spacing-sm);
 }
 
