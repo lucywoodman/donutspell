@@ -76,10 +76,29 @@ body {
     color: var(--text-color);
 }
 
-.wrapper {
+.wrapper,
+.wrapper--game {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+}
+
+.wrapper {
+    background: url("../images/background-home.svg") no-repeat bottom center / 120%;
+}
+
+.wrapper--game {
+    background: url("../images/background.svg") no-repeat -120px -30px / 80%;
+}
+
+@media all and (min-width: 1024px) {
+    .wrapper {
+        background: url("../images/background-home.svg") no-repeat bottom center / 70%;
+    }
+
+    .wrapper--game {
+        background: url("../images/background.svg") no-repeat -120px -30px / 80%;
+    }
 }
 
 /* || TYPOGRAPHY */
@@ -101,13 +120,11 @@ h2 {
     line-height: var(--line-height-sm);
 }
 
-h3,
-.h3 { 
+h3 { 
     font-size: 3.79rem; 
 }
 
-h4,
-.h4 {
+h4 {
     font-size: 2.84rem;
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-lg);
@@ -253,15 +270,15 @@ footer a {
 
 /* || HOME - Main Content */
 
-.home-main {
+.main {
     max-width: 110rem;
     margin: 0 auto;
-    background: url("../images/background-home.svg") no-repeat bottom center / 80%;
     width: 100%;
     padding: var(--spacing-sm) 0;
 }
 
-.content {
+.content,
+.content--game {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -300,8 +317,13 @@ footer a {
     background: var(--brand-purple);
 }
 
+#hard {
+    background: var(--brand-orange);
+}
+
 #easy:hover,
-#medium:hover {
+#medium:hover,
+#hard:hover {
     background: var(--brand-dark-blue);
 }
 
@@ -318,11 +340,12 @@ footer a {
 }
 
 @media all and (min-width: 1024px) {
-    .home-main {
+    .main {
         padding: var(--spacing-md) 0 0 0;
     }
 
-    .content {
+    .content,
+    .content--game {
         flex-direction: row;
     }
 
@@ -333,6 +356,12 @@ footer a {
     #ripley {
         width: 212px;
         height: auto;
-        bottom: -32px;
+        bottom: -34px;
     }
+}
+
+/* || GAME */
+#game-word {
+    font-family: var(--font-game);
+    font-size: var(--font-size-game);
 }
