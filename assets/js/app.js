@@ -182,6 +182,7 @@ function checkAnswer(letter) {
     } else if (correctAnswer.indexOf(letter) === -1) {
         donutLeft = donutLeft - 20;
         updateDonut();
+        checkIfDonutGone();
     }
 }
 
@@ -197,9 +198,17 @@ function updateHiddenWord() {
 function checkIfWordComplete() {
     if (guessState === correctAnswer) {
         // Update page to say "You've won!"
+        console.log("WIN WIN WIN");
     }
 }
 
 function updateDonut() {
     document.getElementById('percent').innerHTML = donutLeft;
+}
+
+function checkIfDonutGone() {
+    if (donutLeft === 0) {
+        // Update page to say "You lost!"
+        console.log("LOSE LOSE LOSE");
+    }
 }
