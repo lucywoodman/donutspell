@@ -8,7 +8,7 @@ function fetchData(url) {
     })
     .then(checkStatus)
     .then(response => response.json())
-    .then(data => associatedWords(data.assoc_word))
+    .then(data => createHints(data.assoc_word))
     .catch(err => {console.error(err);});
 }
 

@@ -116,11 +116,12 @@ function randomWord() {
 randomWord();
 
 fetchData(`https://twinword-word-graph-dictionary.p.rapidapi.com/association/?entry=${correctAnswer}`);
-function associatedWords(data) {
+function createHints(data) {
     let hints = data.map(hint => `
         <li>${hint}</li>
     `).join('');
-    console.log(hints);
+    
+    document.getElementById('answer-hints').innerHTML = hints;
 }
 
 function createButtons() {
