@@ -181,7 +181,7 @@ function checkAnswer(letter) {
         checkIfWordComplete();
     } else if (correctAnswer.indexOf(letter) === -1) {
         donutLeft = donutLeft - 20;
-        console.log(donutLeft);
+        updateDonut();
     }
 }
 
@@ -198,4 +198,8 @@ function checkIfWordComplete() {
     if (guessState === correctAnswer) {
         // Update page to say "You've won!"
     }
+}
+
+function updateDonut() {
+    document.getElementById('percent').innerHTML = donutLeft;
 }
