@@ -101,15 +101,16 @@ let easyWords = [
     "woman"
 ];
 
-let answer = '';
+let correctAnswer = '';
 let donutLeft = 100;
-let guessed = [];
+let guessedLetters = [];
 let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+let guessState = null;
 
 function randomWord() {
-    answer = easyWords[Math.floor(Math.random() * easyWords.length)];
-    console.log(answer);
-    return answer;
+    correctAnswer = easyWords[Math.floor(Math.random() * easyWords.length)];
+    console.log(correctAnswer);
+    return correctAnswer;
 }
 
 randomWord();
@@ -132,8 +133,8 @@ function checkStatus(response) {
 }
 
 // Fetch the answer's definition from API
-fetchData(`https://api.datamuse.com/words?sp=${answer}&md=d`)
-    .then(data => console.log(data[0].defs[0]) )
+// fetchData(`https://api.datamuse.com/words?sp=${answer}&md=d`)
+//     .then(data => console.log(data[0].defs[0]) )
 
 
 function createButtons() {
@@ -146,7 +147,7 @@ function createButtons() {
 
 function displayHiddenWord() {
     let hiddenWord = '';
-    for (const letter of answer) {
+    for (const letter of correctAnswer) {
         hiddenWord += '_';
     }
     document.getElementById('game-word').innerHTML = hiddenWord;
@@ -158,11 +159,8 @@ createButtons();
 function addKeyListeners() {
     document.addEventListener('keydown', function (event) {
         let key = event.key.toLowerCase();
-        if (alphabet.includes(key)) {
-            checkAnswer(key);
-        } else {
-            console.log("You must select a letter");
-        }
+        // If the pressed key is not included in the alphabet, log a message to the console
+        alphabet.includes(key) ? checkAnswer(key) : console.log("You must select a letter");
     })
 }
 
@@ -171,9 +169,33 @@ addKeyListeners();
 function checkAnswer(letter) {
     console.log(`You selected ${letter}!`);
 
-    guessed.indexOf(letter) === -1 ? guessed.push(letter) : null;
-    console.log(guessed);
+    // If the letter hasn't already been guessed (=== -1), add it to the guessedLetters array
+    guessedLetters.indexOf(letter) === -1 ? guessedLetters.push(letter) : null;
+    console.log(guessedLetters);
 
+    // Set the guessed letter's keyboard key as disabled once used
     document.getElementById(letter).setAttribute('disabled', true);
-    
+
+    if (correctAnswer.indexOf(letter) >= 0) {
+        updateHiddenWord();
+        checkIfWordComplete();
+    } else if (correctAnswer.indexOf(letter) === -1) {
+        donutLeft = donutLeft - 20;
+        console.log(donutLeft);
+    }
+}
+
+function updateHiddenWord() {
+    // Grab the correctAnswer and split it to create an array of the letters
+    // Use map to reformat each letter in the correctAnswer array
+    // If a letter has been guessed (is included in the guessedLetters array), then display the letter, else display an underscore
+    guessState = correctAnswer.split('').map(letter => (guessedLetters.indexOf(letter) >= 0 ? letter : "_")).join('');
+
+    document.getElementById('game-word').innerHTML = guessState;
+}
+
+function checkIfWordComplete() {
+    if (guessState === correctAnswer) {
+        // Update page to say "You've won!"
+    }
 }
