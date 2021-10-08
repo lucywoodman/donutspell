@@ -386,3 +386,8 @@ footer a {
     width: 55px;
     height: 55px;
 }
+
+.key:hover {
+    cursor: pointer;
+    background: var(--neutral-light-grey);
+}
