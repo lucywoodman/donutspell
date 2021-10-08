@@ -159,20 +159,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let buttons = document.getElementsByTagName('button');
 
     for (let button of buttons) {
-        button.addEventListener('click', function() {
-            
+        button.addEventListener('click', function(event) {
+            checkAnswer(event.target.id);
+        })
+    }
+
+    for (let button of buttons) {
+        button.addEventListener('keydown', function (event) {
+            checkAnswer(event.key);
         })
     }
 })
 
-function runGame() {
-
-}
-
-function checkAnswer() {
-
-}
-
-function incrementWrongAnswer() {
-
+function checkAnswer(letter) {
+    console.log(`You selected ${letter}!`);
 }
