@@ -139,7 +139,7 @@ fetchData(`https://api.datamuse.com/words?sp=${answer}&md=d`)
 function createButtons() {
     let html = '';
     for (const letter of alphabet) {
-        html += `<button class="key" id="key-${letter}">${letter}</button>`;
+        html += `<button class="key" id="${letter}" onclick="checkAnswer('${letter}')">${letter}</button>`;
     }
     document.getElementById('keyboard').innerHTML = html;
 }
@@ -155,22 +155,25 @@ function displayHiddenWord() {
 displayHiddenWord();
 createButtons();
 
-document.addEventListener('DOMContentLoaded', function() {
-    let buttons = document.getElementsByTagName('button');
+function addKeyListeners() {
+    document.addEventListener('keydown', function (event) {
+        let key = event.key.toLowerCase();
+        if (alphabet.includes(key)) {
+            checkAnswer(key);
+        } else {
+            console.log("You must select a letter");
+        }
+    })
+}
 
-    for (let button of buttons) {
-        button.addEventListener('click', function(event) {
-            checkAnswer(event.target.id);
-        })
-    }
-
-    for (let button of buttons) {
-        button.addEventListener('keydown', function (event) {
-            checkAnswer(event.key);
-        })
-    }
-})
+addKeyListeners();
 
 function checkAnswer(letter) {
     console.log(`You selected ${letter}!`);
+
+    guessed.indexOf(letter) === -1 ? guessed.push(letter) : null;
+    console.log(guessed);
+
+    document.getElementById(letter).setAttribute('disabled', true);
+    
 }
