@@ -115,27 +115,13 @@ function randomWord() {
 
 randomWord();
 
-// FETCH FUNCTIONS 
-function fetchData(url) {
-    return fetch(url)
-    .then(checkStatus)
-    .then(res => res.json())
-    .catch(error => console.log('Looks like there was a problem!', error))
+fetchData(`https://twinword-word-graph-dictionary.p.rapidapi.com/association/?entry=${correctAnswer}`);
+function associatedWords(data) {
+    let hints = data.map(hint => `
+        <li>${hint}</li>
+    `).join('');
+    console.log(hints);
 }
-
-// HELPER FUNCTIONS
-function checkStatus(response) {
-    if(response.ok) {
-      return Promise.resolve(response);
-    } else {
-      return Promise.reject(new Error(response.statusText));
-    }
-}
-
-// Fetch the answer's definition from API
-// fetchData(`https://api.datamuse.com/words?sp=${answer}&md=d`)
-//     .then(data => console.log(data[0].defs[0]) )
-
 
 function createButtons() {
     let html = '';
