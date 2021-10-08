@@ -114,16 +114,13 @@ function randomWord() {
 
 randomWord();
 
-//FETCH FUNCTIONS
+// FETCH FUNCTIONS 
 function fetchData(url) {
     return fetch(url)
     .then(checkStatus)
     .then(res => res.json())
     .catch(error => console.log('Looks like there was a problem!', error))
 }
-
-fetchData(`https://api.datamuse.com/words?sp=${answer}&md=d`)
-    .then(data => console.log(data[0].defs[0]) )
 
 // HELPER FUNCTIONS
 function checkStatus(response) {
@@ -132,5 +129,45 @@ function checkStatus(response) {
     } else {
       return Promise.reject(new Error(response.statusText));
     }
-  }
-  
+}
+
+// Fetch the answer's definition from API
+fetchData(`https://api.datamuse.com/words?sp=${answer}&md=d`)
+    .then(data => console.log(data[0].defs[0]) )
+
+
+function createButtons() {
+    let html = '';
+    for (const letter of alphabet) {
+        html += `<button class="key" id="key-${letter}">${letter}</button>`;
+    }
+    document.getElementById('keyboard').innerHTML = html;
+}
+
+createButtons();
+
+document.addEventListener('DOMContentLoaded', function() {
+    let buttons = document.getElementsByTagName('button');
+
+    for (let button of buttons) {
+        button.addEventListener('click', function() {
+            
+        })
+    }
+})
+
+function runGame() {
+
+}
+
+function checkAnswer() {
+
+}
+
+function incrementWrongAnswer() {
+
+}
+
+function displayHiddenWord() {
+
+}
