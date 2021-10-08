@@ -144,6 +144,15 @@ function createButtons() {
     document.getElementById('keyboard').innerHTML = html;
 }
 
+function displayHiddenWord() {
+    let hiddenWord = '';
+    for (const letter of answer) {
+        hiddenWord += '_';
+    }
+    document.getElementById('game-word').innerHTML = hiddenWord;
+}
+
+displayHiddenWord();
 createButtons();
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -165,9 +174,5 @@ function checkAnswer() {
 }
 
 function incrementWrongAnswer() {
-
-}
-
-function displayHiddenWord() {
 
 }

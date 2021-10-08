@@ -367,6 +367,7 @@ footer a {
 #game-word {
     font-family: var(--font-game);
     font-size: var(--font-size-game);
+    letter-spacing: 1rem;
 }
 
 #keyboard {
