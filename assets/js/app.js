@@ -204,6 +204,7 @@ function checkIfWordComplete() {
 
 function updateDonut() {
     document.getElementById('percent').innerHTML = donutLeft;
+    document.getElementById('donut').src = `./assets/images/donut-${donutLeft}.svg`;
 }
 
 function checkIfDonutGone() {
