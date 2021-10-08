@@ -115,11 +115,11 @@ function randomWord() {
 
 randomWord();
 
-fetchData(`https://twinword-word-graph-dictionary.p.rapidapi.com/association/?entry=${correctAnswer}`);
-function createHints(data) {
-    let hints = data.map(hint => `
-        <li>${hint}</li>
-    `).join('');
+fetchData(`https://dictionaryapi.com/api/v3/references/learners/json/${correctAnswer}?key=df6eee5d-53f0-48ce-a696-76eabea17b10`);
+function createHint(data) {
+    let hints = `
+        <p>${data}</p>
+    `;
     
     document.getElementById('answer-hints').innerHTML = hints;
 }
@@ -199,4 +199,8 @@ function checkIfDonutGone() {
         // Update page to say "You lost!"
         console.log("LOSE LOSE LOSE");
     }
+}
+
+function reset() {
+    // Reset the game back to default
 }

@@ -1,14 +1,8 @@
 function fetchData(url) {
-    fetch(url, {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com",
-            "x-rapidapi-key": "26d3012ecbmsh246de17f4462878p1d3995jsn727d0dcee879"
-        }
-    })
+    fetch(url)
     .then(checkStatus)
     .then(response => response.json())
-    .then(data => createHints(data.assoc_word))
+    .then(data => createHint(data[0].shortdef[0]))
     .catch(err => {console.error(err);});
 }
 
