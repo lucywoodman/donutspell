@@ -104,10 +104,33 @@ let easyWords = [
 let answer = '';
 let donutLeft = 100;
 let guessed = [];
+let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
 function randomWord() {
     answer = easyWords[Math.floor(Math.random() * easyWords.length)];
     console.log(answer);
+    return answer;
 }
 
 randomWord();
+
+//FETCH FUNCTIONS
+function fetchData(url) {
+    return fetch(url)
+    .then(checkStatus)
+    .then(res => res.json())
+    .catch(error => console.log('Looks like there was a problem!', error))
+}
+
+fetchData(`https://api.datamuse.com/words?sp=${answer}&md=d`)
+    .then(data => console.log(data[0].defs[0]) )
+
+// HELPER FUNCTIONS
+function checkStatus(response) {
+    if(response.ok) {
+      return Promise.resolve(response);
+    } else {
+      return Promise.reject(new Error(response.statusText));
+    }
+  }
+  
