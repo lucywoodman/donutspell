@@ -140,8 +140,7 @@ function addKeyListeners() {
     for (const keyboardKey of keyboardKeys) {
         keyboardKey.addEventListener('click', function () {
             let keyboardKey = this.id.toLowerCase();
-        // If the selected key is not included in the alphabet, log a message to the console
-        alphabet.includes(keyboardKey) ? checkAnswer(keyboardKey) : console.log("You must select a letter");
+            checkAnswer(keyboardKey);
     })}
 }
 
