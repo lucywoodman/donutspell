@@ -192,8 +192,7 @@ function checkIfWordComplete() {
             <p>The answer is:
         `;
         document.getElementById('keyboard').style.display = "none";
-        document.getElementsByClassName('remaining-donut')[0].style.display = "none";
-        document.getElementsByClassName('hints')[0].style.display = "none";
+        document.getElementById('hint').style.display = "none";
     }
 }
 
@@ -213,8 +212,7 @@ function checkIfDonutGone() {
         `;
         document.getElementById('game-word').innerHTML = correctAnswer;
         document.getElementById('keyboard').style.display = "none";
-        document.getElementsByClassName('remaining-donut')[0].style.display = "none";
-        document.getElementsByClassName('hints')[0].style.display = "none";
+        document.getElementById('hint').style.display = "none";
     }
 }
 
