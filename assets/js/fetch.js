@@ -16,7 +16,7 @@ async function getHints() {
   
   function createHint(data) {
     let hint = `
-        <p>${data}</p>
+        <p>Hint: ${data}</p>
     `;
   
     console.log(hint);
