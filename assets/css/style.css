@@ -3,8 +3,8 @@
 
 /* || GLOBAL STYLING */
 :root {
-    /* Set root font size to 8px for small screens */
-    font-size: 50%;
+    /* Set root font size to 7px for small screens */
+    font-size: 43.75%;
 
     /* || Fonts */
     --font-head: 'Nunito', sans-serif;
@@ -15,7 +15,7 @@
     --font-size-lg: 2.2rem;
     --font-size-md: 2.1rem;
     --font-size-sm: 1.8rem;
-    --font-size-game: 5.6rem;
+    --font-size-game: 4rem;
 
     /* || Font weights */
     --font-weight-black: 900;
@@ -57,8 +57,10 @@
 @media all and (min-width: 1024px) {
     :root {
         /* Set root font size to 10px for large screens */
-        font-size: 62.5%;    
-    }       
+        font-size: 62.5%;
+
+        --font-size-game: 5.6rem;
+    }
 }
 
 * {
@@ -140,7 +142,7 @@ p {
 a {
     color: var(--text-color);
     text-decoration: none;
-    transition: all .3s ease-out;
+    transition: color .3s ease-out;
     padding: 1rem 2rem;
 }
 
@@ -152,13 +154,13 @@ a:active {
 button {
     display: block;
     width: 100%;
-    padding: 2.2rem 3rem 2.2rem;
+    padding: 2rem 2.2rem 2rem;
     border-radius: 12px;
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-bold);
-    background: var(--brand-orange);
+    background: var(--brand-turquoise);
     cursor: pointer;
-    transition: all .3s ease-out;
+    transition: background .3s ease-out;
     color: var(--white);
     text-align: center;
     text-transform: uppercase;
@@ -167,6 +169,13 @@ button {
 
 button:hover {
     background: var(--brand-dark-blue);
+}
+
+@media all and (min-width: 1024px) {
+    button {
+        padding: 2.2rem 3rem 2.2rem;
+        margin-bottom: 3rem;
+    }
 }
 
 /* || HEADER */
@@ -294,7 +303,7 @@ footer a {
 
 .intro {
     max-width: var(--width-xlg);
-    padding-right: var(--spacing-sm);
+    padding: var(--spacing-sm);
 }
 
 .choose-level,
@@ -303,10 +312,12 @@ footer a {
     padding: var(--spacing-sm);
     border-radius: 12px;
     margin-bottom: var(--spacing-sm);
+    text-align: center;
 }
 
 .choose-level p {
     font-weight: var(--font-weight-bold);
+    margin-top: 1rem;
 }
 
 #easy {
@@ -344,12 +355,20 @@ footer a {
         padding: var(--spacing-md) 0 0 0;
     }
 
+    .intro {
+        padding: 0 var(--spacing-sm);
+    }
+
     #content--home {
         flex-direction: row;
     }
 
     .choose-level {
         margin-bottom: 0;
+    }
+
+    .white-box {
+        padding: var(--spacing-sm);
     }
 
     #ripley {
@@ -362,11 +381,20 @@ footer a {
 /* || GAME */
 .game-grid {
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "intro donut"
-        "keyboard keyboard";
+        "donut"
+        "intro"
+        "keyboard";
+}
+
+.game-grid > .intro {
+    grid-area: intro;
+}
+
+.donut--game {
+    grid-area: donut;
 }
 
 #game-word {
@@ -381,10 +409,6 @@ footer a {
     font-style: italic;
 }
 
-.donut--game {
-    padding: var(--spacing-sm) var(--spacing-md);
-}
-
 .remaining-donut {
     font-size: var(--font-size-sm);
     margin-bottom: 2rem;
@@ -393,7 +417,7 @@ footer a {
 }
 
 #donut {
-    width: 250px;
+    width: 150px;
     height: auto;
 }
 
@@ -411,10 +435,10 @@ footer a {
     font-size: var(--font-size-lg);
     background: var(--white);
     border-radius: 12px;
-    margin: 1rem;
-    padding: 1.3rem 2rem 1.4rem;
-    width: 55px;
-    height: 55px;
+    margin: .5rem;
+    padding: 1rem 1.7rem 1.1rem;
+    width: 45px;
+    height: 45px;
 }
 
 .key:hover {
@@ -425,4 +449,31 @@ footer a {
 .key:disabled {
     opacity: 0.5;
     cursor: default;
+}
+
+@media all and (min-width: 1024px) {
+    .game-grid {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "intro donut"
+            "keyboard keyboard";
+    }
+
+    .donut--game {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    #donut {
+        width: 250px;
+        height: auto;
+    }
+
+    .key {
+        margin: 1rem;
+        padding: 1.3rem 2rem 1.4rem;
+        width: 55px;
+        height: 55px;
+    }
 }
