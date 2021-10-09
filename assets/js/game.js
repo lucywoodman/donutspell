@@ -1,4 +1,4 @@
-let answerWords = [
+let hardWords = [
     "accident",
     "actual",
     "address",
@@ -107,8 +107,12 @@ let guessedLetters = [];
 let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 let guessState = null;
 
-function randomWord() {
-    correctAnswer = answerWords[Math.floor(Math.random() * answerWords.length)];
+function randomWord(level) {
+    let wordList = level === 'hard'   ? hardWords 
+                 : level === 'medium' ? medWords
+                 : level === 'easy'   ? easyWords
+                 : null;
+    correctAnswer = wordList[Math.floor(Math.random() * wordList.length)];
     console.log(correctAnswer);
 }
 
