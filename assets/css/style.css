@@ -401,6 +401,10 @@ footer a {
     font-style: italic;
 }
 
+#restart {
+    display: none;
+}
+
 .remaining-donut {
     font-size: var(--font-size-sm);
     margin-bottom: 2rem;

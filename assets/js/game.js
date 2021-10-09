@@ -144,7 +144,7 @@ function addKeyListeners() {
         alphabet.includes(key) ? checkAnswer(key) : console.log("You must select a letter");
     });
     
-    let keyboardKeys = document.getElementsByTagName('button');
+    let keyboardKeys = document.getElementsByClassName('key');
     
     for (const keyboardKey of keyboardKeys) {
         keyboardKey.addEventListener('click', function () {
@@ -193,6 +193,7 @@ function checkIfWordComplete() {
         `;
         document.getElementById('keyboard').style.display = "none";
         document.getElementById('hint').style.display = "none";
+        document.getElementById('restart').style.display = "block";
     }
 }
 
@@ -213,9 +214,6 @@ function checkIfDonutGone() {
         document.getElementById('game-word').innerHTML = correctAnswer;
         document.getElementById('keyboard').style.display = "none";
         document.getElementById('hint').style.display = "none";
+        document.getElementById('restart').style.display = "block";
     }
-}
-
-function reset() {
-    // Reset the game back to default
 }

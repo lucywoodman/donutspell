@@ -1,3 +1,17 @@
+(function showHomePage() {
+    addLevelListeners();
+    addRestartListener();
+})();
+
+function setUpGame(level) {
+    displayGame();
+    randomWord(level);
+    displayHiddenWord();
+    createButtons();
+    addKeyListeners();
+    getHints();
+}
+
 function addLevelListeners() {
     let levelButtons = document.getElementsByClassName('level');
     
@@ -9,14 +23,12 @@ function addLevelListeners() {
     })}
 }
 
-addLevelListeners();
+function addRestartListener() {
+    let restartButton = document.getElementById('restart');
 
-function setUpGame(level) {
-    displayGame();
-    randomWord(level);
-    displayHiddenWord();
-    createButtons();
-    addKeyListeners();
-    getHints();
+    restartButton.addEventListener('click', function () {
+        console.log('restart the game')
+        document.location.reload();
+    })
 }
 
