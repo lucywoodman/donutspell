@@ -294,10 +294,11 @@ footer a {
 
 .intro {
     max-width: var(--width-xlg);
-    padding: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
 }
 
-.choose-level {
+.choose-level,
+.white-box {
     background: var(--white);
     padding: var(--spacing-sm);
     border-radius: 12px;
@@ -361,8 +362,11 @@ footer a {
 /* || GAME */
 .game-grid {
     display: grid;
-    grid-template-rows: 2fr;
     grid-template-columns: 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "intro donut"
+        "keyboard keyboard";
 }
 
 #game-word {
@@ -371,7 +375,30 @@ footer a {
     letter-spacing: 1rem;
 }
 
+#hint {
+    font-size: 1.6rem;
+    color: var(--brand-dark-blue);
+    font-style: italic;
+}
+
+.donut--game {
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.remaining-donut {
+    font-size: var(--font-size-sm);
+    margin-bottom: 2rem;
+    color: var(--brand-dark-blue);
+    text-align: center;
+}
+
+#donut {
+    width: 250px;
+    height: auto;
+}
+
 #keyboard {
+    grid-area: keyboard;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

@@ -47,7 +47,7 @@
                 </div>
 
                 <!-- Level selection box -->
-                <div class="choose-level">
+                <div class="choose-level white-box">
                     <p>Choose a level to get started</p>
                     <button id="easy" class="level">Easy</button>
                     <button id="medium" class="level">Tricky</button>
@@ -64,24 +64,20 @@
                         <h2 id="game-title">Guess the word!</h2>
                         <p id="game-text">Type or click on the letters below to spell the hidden word. Guess correctly to keep the donut for yourself!</p>
                         <p id="game-word">Word to be guessed goes here</p>
-                    </div>
-
-                    <div class="donut--game">
-                        <img id="donut" src="assets/images/donut-100.svg" alt="Illustration of a donut">
-                    </div>
-
-                    <div>
-                        <!-- The game keyboard -->
-                        <div id="keyboard"></div>
-    
-                        <!-- Remaining incorrect guesses-->
-                        <div class="remaining-donut">Amount of donut left: <span id="percent">100</span>% of 100%</div>
-    
+                        
                         <!-- Word hints, fetched from an API -->
                         <div id="hint"></div>
-    
-                        <button class="button" >Reset the game</button>
                     </div>
+
+                    <div class="donut--game white-box">
+                        <!-- Remaining incorrect guesses-->
+                        <div class="remaining-donut">Donut left: <span id="percent">100</span>% of 100%</div>
+                        <img id="donut" src="assets/images/donut-100.svg" alt="Illustration of a donut">
+                        <button id="restart">Reset the game</button>
+                    </div>
+                    
+                    <!-- The game keyboard -->
+                    <div id="keyboard"></div>
                 </div>
             </section>
 
