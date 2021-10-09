@@ -277,7 +277,7 @@ footer a {
     padding: var(--spacing-sm) 0;
 }
 
-.content,
+#content--home,
 .content--game {
     display: flex;
     flex-direction: column;

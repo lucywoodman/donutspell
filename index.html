@@ -38,7 +38,7 @@
 
         <!-- Main content -->
         <section class="main">
-            <div class="content">
+            <div id="content--home">
 
                 <!-- Introduction to the game -->
                 <div class="content__intro">
@@ -53,6 +53,33 @@
                     <a href="#" id="medium" class="button">Tricky</a>
                     <a href="#" id="hard" class="button">Difficult</a>
                 </div>
+            </div>
+
+            <div id="content--game">
+
+                <!-- How to play the game -->
+                <div class="content__intro">
+                    <h2>Guess the word!</h2>
+                    <p>Type or click on the letters below to spell the hidden word. Guess correctly to keep the donut for yourself!</p>
+                    <p id="game-word">Word to be guessed goes here</p>
+                </div>
+
+                <div class="donut--game">
+                    <img id="donut" src="assets/images/donut-100.svg" alt="Illustration of a donut">
+                </div>
+
+                <!-- The game keyboard -->
+                <div id="keyboard"></div>
+
+                <!-- Remaining incorrect guesses-->
+                <div class="remaining-donut">Amount of donut left: <span id="percent">100</span>% of 100%</div>
+
+                <!-- Word hints, fetched from an API -->
+                <div class="hints">
+                    <ul id="answer-hints"></ul>
+                </div>
+
+                <button class="button" onclick="reset()">Reset the game</button>
             </div>
 
             <!-- Illustration of Ripley the dog -->
@@ -77,6 +104,8 @@
 
     <!-- Game script -->
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/game.js"></script>
+    <script src="assets/js/hint.js"></script>
     
     <!-- Phosphor icons - powering the social media icons -->
     <script src="https://unpkg.com/phosphor-icons"></script>
