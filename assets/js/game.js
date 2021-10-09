@@ -107,6 +107,11 @@ let guessedLetters = [];
 let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 let guessState = null;
 
+function displayGame() {
+    document.getElementById('content--home').style.display = 'none';
+    document.getElementById('content--game').style.display = 'block';
+}
+
 function randomWord(level) {
     let wordList = level === 'hard'   ? hardWords 
                  : level === 'medium' ? medWords

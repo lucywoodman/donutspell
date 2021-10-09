@@ -36,56 +36,60 @@
             </nav>
         </header>
 
-        <section class="main">
+        <div class="main">
             <!-- Initial content -->
-            <div id="content--home">
+            <section id="content--home">
 
                 <!-- Introduction to the game -->
-                <div class="content__intro">
+                <div class="intro">
                     <h2>Save donuts from Ripley the dog!</h2>
                     <p>A word game for 8-9 year olds. Collect the donuts before Ripley the dog eats them by spelling the words correctly.</p>
                 </div>
 
                 <!-- Level selection box -->
-                <div class="content__level">
+                <div class="choose-level">
                     <p>Choose a level to get started</p>
-                    <a href="#" id="easy" class="button level">Easy</a>
-                    <a href="#" id="medium" class="button level">Tricky</a>
-                    <a href="#" id="hard" class="button level">Difficult</a>
+                    <button id="easy" class="level">Easy</button>
+                    <button id="medium" class="level">Tricky</button>
+                    <button id="hard" class="level">Difficult</button>
                 </div>
-            </div>
+            </section>
 
             <!-- Game content -->
-            <div id="content--game">
+            <section id="content--game">
 
-                <!-- How to play the game -->
-                <div class="content__intro">
-                    <h2 id="game-title">Guess the word!</h2>
-                    <p id="game-text">Type or click on the letters below to spell the hidden word. Guess correctly to keep the donut for yourself!</p>
-                    <p id="game-word">Word to be guessed goes here</p>
+                <div class="game-grid">
+                    <!-- How to play the game -->
+                    <div class="intro">
+                        <h2 id="game-title">Guess the word!</h2>
+                        <p id="game-text">Type or click on the letters below to spell the hidden word. Guess correctly to keep the donut for yourself!</p>
+                        <p id="game-word">Word to be guessed goes here</p>
+                    </div>
+
+                    <div class="donut--game">
+                        <img id="donut" src="assets/images/donut-100.svg" alt="Illustration of a donut">
+                    </div>
+
+                    <div>
+                        <!-- The game keyboard -->
+                        <div id="keyboard"></div>
+    
+                        <!-- Remaining incorrect guesses-->
+                        <div class="remaining-donut">Amount of donut left: <span id="percent">100</span>% of 100%</div>
+    
+                        <!-- Word hints, fetched from an API -->
+                        <div id="hint"></div>
+    
+                        <button class="button" >Reset the game</button>
+                    </div>
                 </div>
-
-                <div class="donut--game">
-                    <img id="donut" src="assets/images/donut-100.svg" alt="Illustration of a donut">
-                </div>
-
-                <!-- The game keyboard -->
-                <div id="keyboard"></div>
-
-                <!-- Remaining incorrect guesses-->
-                <div class="remaining-donut">Amount of donut left: <span id="percent">100</span>% of 100%</div>
-
-                <!-- Word hints, fetched from an API -->
-                <div id="hint"></div>
-
-                <button class="button" >Reset the game</button>
-            </div>
+            </section>
 
             <!-- Illustration of Ripley the dog -->
             <div class="ripley">
                 <img src="assets/images/ripley.svg" alt="Ripley the dog" id="ripley">
             </div>
-        </section>
+        </div>
 
         <!-- Footer -->
         <footer>
