@@ -39,6 +39,14 @@ function checkIfWordComplete() {
     if (guessState === correctAnswer) {
         // Update page to say "You've won!"
         console.log("WIN WIN WIN");
+        document.getElementById('game-title').innerHTML = "You win!";
+        document.getElementById('game-text').innerHTML = `
+            You get to keep ${donutLeft}% of the donut!</p>
+            <p>The answer is:
+        `;
+        document.getElementById('keyboard').style.display = "none";
+        document.getElementsByClassName('remaining-donut')[0].style.display = "none";
+        document.getElementsByClassName('hints')[0].style.display = "none";
     }
 }
 
@@ -51,6 +59,15 @@ function checkIfDonutGone() {
     if (donutLeft === 0) {
         // Update page to say "You lost!"
         console.log("LOSE LOSE LOSE");
+        document.getElementById('game-title').innerHTML = "You lose!";
+        document.getElementById('game-text').innerHTML = `
+            Oh no! Ripley ate all of the donut!</p>
+            <p>The correct answer is:
+        `;
+        document.getElementById('game-word').innerHTML = correctAnswer;
+        document.getElementById('keyboard').style.display = "none";
+        document.getElementsByClassName('remaining-donut')[0].style.display = "none";
+        document.getElementsByClassName('hints')[0].style.display = "none";
     }
 }
 
