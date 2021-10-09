@@ -15,11 +15,11 @@ async function getHints() {
   }
   
   function createHint(data) {
-    let hints = `
+    let hint = `
         <p>${data}</p>
     `;
   
-    console.log(hints);
-    document.getElementById('answer-hints').innerHTML = hints;
+    console.log(hint);
+    document.getElementById('hint').innerHTML = hint;
   }
 }
