@@ -7,6 +7,7 @@ let guessState = null;
 function displayGame() {
     document.getElementById('content--home').style.display = 'none';
     document.getElementById('content--game').style.display = 'block';
+    document.getElementsByClassName('nav__item--active')[0].classList.remove('nav__item--active');
 }
 
 function randomWord(level) {
