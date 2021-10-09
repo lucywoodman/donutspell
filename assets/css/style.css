@@ -268,7 +268,7 @@ footer a {
     }   
 }
 
-/* || HOME - Main Content */
+/* || Main Content */
 
 .main {
     max-width: 110rem;
@@ -278,17 +278,21 @@ footer a {
 }
 
 #content--home,
-.content--game {
+#content--game {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#content--game {
+    display: none;
 }
 
 .content__intro {
     max-width: var(--width-xlg);
 }
 
-.content > .content__intro {
+#content--home > .content__intro {
     padding: var(--spacing-sm);
 }
 
@@ -347,8 +351,8 @@ footer a {
         padding: var(--spacing-md) 0 0 0;
     }
 
-    .content,
-    .content--game {
+    #content--home,
+    #content--game {
         flex-direction: row;
     }
 
