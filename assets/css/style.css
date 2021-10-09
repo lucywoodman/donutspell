@@ -155,6 +155,7 @@ button {
     color: var(--white);
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 3rem;
 }
 
