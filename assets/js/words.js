@@ -1,3 +1,4 @@
+// Array of easy words, from the UK curriculum. Tricky words for year 1.
 let easyWords = [
     "the",
     "a",
@@ -46,6 +47,7 @@ let easyWords = [
     "our"
 ];
 
+// Array of medium words, from the UK curriculum. Tricky words for year 2.
 let medWords = [
     "door",
     "floor",
@@ -111,6 +113,7 @@ let medWords = [
     "even",
 ];
 
+// Array of hard words, from the UK curriculum. Tricky words for years 3 and 4.
 let hardWords = [
     "accident",
     "actual",

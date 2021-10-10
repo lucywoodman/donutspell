@@ -1,3 +1,7 @@
+/**
+ * Fetches a simple definition of the correct answer word from the Mirriam-Webster Developer Center API.
+ * When the response is successfully received, converts the response to JSON, pulls the required data and adds it to the DOM.
+ */
 async function getHints() {
   fetch(`https://dictionaryapi.com/api/v3/references/learners/json/${correctAnswer}?key=df6eee5d-53f0-48ce-a696-76eabea17b10`)
     .then(checkStatus)
@@ -5,7 +9,11 @@ async function getHints() {
     .then(data => createHint(data[0].shortdef[0]))
     .catch(err => {console.error(err);});
   
-  // HELPER FUNCTIONS
+  /**
+   * Checks the status of the API for the fetch request. If the API is okay, returns the response. If not, throws an error.
+   * @param {response} response - the initial response from the fetch where this function is called.
+   * @returns resolved or rejected promise.
+   */
   function checkStatus(response) {
     if(response.ok) {
       return Promise.resolve(response);
@@ -14,12 +22,15 @@ async function getHints() {
     }
   }
   
+  /**
+   * Takes the definition from the API response and adds it to the DOM, inside the #hint element.
+   * @param {string} data - A string pulled from the API JSON response.
+   */
   function createHint(data) {
     let hint = `
         <p>Hint: ${data}</p>
     `;
   
-    console.log(hint);
     document.getElementById('hint').innerHTML = hint;
   }
 }
