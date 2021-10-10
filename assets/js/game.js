@@ -21,7 +21,7 @@ function randomWord(level) {
 
 function displayHiddenWord() {
     let hiddenWord = '';
-    for (let {} of correctAnswer) {
+    for (let _letter of correctAnswer) {
         hiddenWord += '_';
     }
     document.getElementById('game-word').innerHTML = hiddenWord;
@@ -36,11 +36,7 @@ function createButtons() {
 }
 
 function addKeyListeners() {
-    document.addEventListener('keydown', function (event) {
-        let key = event.key.toLowerCase();
-        // If the pressed key is not included in the alphabet, log a message to the console
-        alphabet.includes(key) ? checkAnswer(key) : console.log("You must select a letter");
-    });
+    document.addEventListener('keydown', keyboardKeyHandler);
     
     let keyboardKeys = document.getElementsByClassName('key');
     
@@ -49,6 +45,11 @@ function addKeyListeners() {
             let keyboardKey = this.id.toLowerCase();
             checkAnswer(keyboardKey);
     })}
+}
+
+function keyboardKeyHandler(event) {
+    let key = event.key.toLowerCase();
+    alphabet.includes(key) ? checkAnswer(key) : console.log("You must select a letter");
 }
 
 function checkAnswer(letter) {
@@ -92,6 +93,7 @@ function checkIfWordComplete() {
         document.getElementById('keyboard').style.display = "none";
         document.getElementById('hint').style.display = "none";
         document.getElementById('restart').style.display = "block";
+        document.removeEventListener('keydown', keyboardKeyHandler);
     }
 }
 
@@ -113,5 +115,6 @@ function checkIfDonutGone() {
         document.getElementById('keyboard').style.display = "none";
         document.getElementById('hint').style.display = "none";
         document.getElementById('restart').style.display = "block";
+        document.removeEventListener('keydown', keyboardKeyHandler);
     }
 }
