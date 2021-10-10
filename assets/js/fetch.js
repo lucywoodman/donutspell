@@ -2,7 +2,7 @@
  * Fetches a simple definition of the correct answer word from the Mirriam-Webster Developer Center API.
  * When the response is successfully received, converts the response to JSON, pulls the required data and adds it to the DOM.
  */
-async function getHints() {
+function getHints() {
   fetch(`https://dictionaryapi.com/api/v3/references/learners/json/${correctAnswer}?key=df6eee5d-53f0-48ce-a696-76eabea17b10`)
     .then(checkStatus)
     .then(response => response.json())
