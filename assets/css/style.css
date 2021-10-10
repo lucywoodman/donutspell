@@ -85,12 +85,12 @@ body {
 }
 
 .wrapper {
-    background: url("../images/background-home.svg") no-repeat bottom center / 120%;
+    background: url("../images/background.svg") no-repeat bottom center / 120%;
 }
 
 @media all and (min-width: 1024px) {
     .wrapper {
-        background: url("../images/background-home.svg") no-repeat bottom center / 70%;
+        background: url("../images/background.svg") no-repeat bottom center / 70%;
     }
 }
 
