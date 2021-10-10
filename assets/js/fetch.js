@@ -27,10 +27,18 @@ async function getHints() {
    * @param {string} data - A string pulled from the API JSON response.
    */
   function createHint(data) {
-    let hint = `
+    // If there isn't a definition, displays a generic message.
+    if (data === undefined) {
+      let hint = `
+        <p>Hint: no hint available, sorry!</p>
+      `;
+      document.getElementById('hint').innerHTML = hint;
+    // If there is a definition, displays it.
+    } else {
+      let hint = `
         <p>Hint: ${data}</p>
-    `;
-  
-    document.getElementById('hint').innerHTML = hint;
+      `;
+      document.getElementById('hint').innerHTML = hint;
+    }
   }
 }
