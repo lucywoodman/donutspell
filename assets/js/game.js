@@ -79,7 +79,7 @@ function keyboardKeyHandler(event) {
     // Checks that the input is lowercase and included in the alphabet.
     // True: passes it to the checkAnswer function.
     // False: logs a message to the console.
-    alphabet.includes(key) ? checkAnswer(key) : console.log("You must select a letter");
+    let _checkAlphabet = alphabet.includes(key) ? checkAnswer(key) : console.log("You must select a letter");
 }
 
 /**
@@ -101,7 +101,7 @@ function mouseKeyHandler() {
  */
 function checkAnswer(letter) {
     // If the letter hasn't already been guessed, adds it to the guessedLetters array, else does nothing.
-    guessedLetters.indexOf(letter) === -1 ? guessedLetters.push(letter) : null;
+    let _addGuess = guessedLetters.indexOf(letter) === -1 ? guessedLetters.push(letter) : null;
 
     // Sets the guessed letter's keyboard key as disabled once used.
     document.getElementById(letter).setAttribute('disabled', true);
