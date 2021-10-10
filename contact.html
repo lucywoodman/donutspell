@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Donutspell: a hangman-style word game for helping children ages 6-9 to practice spelling">
+    <meta name="keywords" content="word game, spelling, key stage 1, key stage 2, uk curriculum, primary education">
+    <title>Donutspell | Contact</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+
+    <!-- EmailJS API for form submission. Needs to be in the head -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Wrapper for the grid layout -->
+    <div class="wrapper">
+        <header>
+            <!-- Logo -->
+            <div id="logo">
+                <h1><a href="index.html"><img src="assets/images/donut-logo.svg" alt="Illustrated donut"> Donutspell</a></h1>
+            </div>
+
+            <!-- Main navigation -->
+            <nav id="main-nav">
+                <ul class="nav">
+                    <li class="nav__item"><a href="index.html">Home</a></li>
+                    <li class="nav__item"><a href="about.html">About</a></li>
+                    <li class="nav__item nav__item--active"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main">
+
+            <section class="form">
+                <!-- Contact form -->
+                <form id="contact-form">
+                    <p>Something here</p>
+                    <!-- Name field -->
+                    <label for="name">Your name*</label>
+                    <input type="text" id="name" name="name" required class="text-input">
+                    <!-- Email field -->
+                    <label for="email">Your email address*</label>
+                    <input type="email" id="email" name="email_address" required class="text-input">
+                    <!-- Message textarea field -->
+                    <label for="message">Your message*</label>
+                    <textarea name="message" id="message" cols="30" rows="10" required class="textarea"></textarea>
+                    <!-- Submit button -->
+                    <input type="submit" value="Send" class="button">
+                </form>
+
+            </section>
+
+            <!-- Illustration of Ripley the dog -->
+            <div class="ripley">
+                <img src="assets/images/ripley.svg" alt="Ripley the dog" id="ripley">
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="social">
+
+                <!-- Social media link icons -->
+                <ul class="social__links">
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ph-facebook-logo-fill ph-xl"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph-instagram-logo-fill ph-xl"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="ph-twitter-logo-fill ph-xl"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Phosphor icons - powering the social media icons -->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+</body>
+
+</html>
