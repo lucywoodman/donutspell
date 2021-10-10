@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function displayThanks() {
     let html = `
-            <p>Thanks</p>
+            <h2>Success!</h2>
+            <p>Your message has been sent. Thank you for getting in touch.</p>
+            <a href="index.html" class="button">Return home</a>
             `;
-    document.getElementById('content--contact').innerHTML = html;
+    document.getElementsByClassName('form')[0].innerHTML = html;
 }
