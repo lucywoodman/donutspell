@@ -163,6 +163,7 @@ button,
 button:hover,
 .button:hover {
     background: var(--brand-dark-blue);
+    color: var(--white);
 }
 
 @media all and (min-width: 1024px) {
