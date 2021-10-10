@@ -190,6 +190,10 @@ header {
     text-align: center;
 }
 
+#logo h1 a:hover {
+    color: var(--text-color);
+}
+
 #logo h1 img {
     width: 3.5rem;
     height: auto;
