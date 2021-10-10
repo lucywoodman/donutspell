@@ -2,12 +2,18 @@
 document.addEventListener('DOMContentLoaded', function addLevelListeners() {
     let levelButtons = document.getElementsByClassName('level');
     
-    for (const levelButton of levelButtons) {
-        levelButton.addEventListener('click', function () {
-            let level = this.id;
-            setUpGame(level);
-    })}    
-})
+    for (let levelButton of levelButtons) {
+        levelButton.addEventListener('click', levelButtonHandler);
+    }
+
+    /**
+     * Assigns the level button's ID to a variable and passes it to the setUpGame function.
+     */
+    function levelButtonHandler() {
+        let level = this.id;
+        setUpGame(level);
+    }
+});
 
 /**
  * Sets up the game once a level is selected.
