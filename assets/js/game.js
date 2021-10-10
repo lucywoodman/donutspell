@@ -64,12 +64,8 @@ function addKeyListeners() {
     // Loops through the array.
     for (const button of mouseButtons) {
         // Adds mouse event listener to each button.
-        button.addEventListener('click', function () {
-            // Converts the button's id name to lowercase.
-            let button = this.id.toLowerCase();
-            // Passes the button's id to the checkAnswer function.
-            checkAnswer(button);
-    })}
+        button.addEventListener('click', mouseKeyHandler);
+    }
 }
 
 /**
@@ -84,6 +80,17 @@ function keyboardKeyHandler(event) {
     // True: passes it to the checkAnswer function.
     // False: logs a message to the console.
     alphabet.includes(key) ? checkAnswer(key) : console.log("You must select a letter");
+}
+
+/**
+ * Handles click events from mouse inputs for the game's keyboard.
+ * Passes the input to the checkAnswer function.
+ */
+function mouseKeyHandler() {
+    // Converts the button's id name to lowercase.
+    let button = this.id.toLowerCase();
+    // Passes the button's id to the checkAnswer function.
+    checkAnswer(button);
 }
 
 /**
@@ -144,7 +151,7 @@ function checkIfWordComplete() {
         // Removes the keyboard event listeners.
         document.removeEventListener('keydown', keyboardKeyHandler);
     } else {
-        return
+        return;
     }
 }
 
