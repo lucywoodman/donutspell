@@ -22,13 +22,3 @@ function addLevelListeners() {
             setUpGame(level);
     })}
 }
-
-function addRestartListener() {
-    let restartButton = document.getElementById('restart');
-
-    restartButton.addEventListener('click', function () {
-        console.log('restart the game')
-        document.location.reload();
-    })
-}
-
