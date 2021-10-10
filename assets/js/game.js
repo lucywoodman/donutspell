@@ -77,9 +77,8 @@ function keyboardKeyHandler(event) {
     // Converts the pressed key input to lowercase.
     let key = event.key.toLowerCase();
     // Checks that the input is lowercase and included in the alphabet.
-    // True: passes it to the checkAnswer function.
-    // False: logs a message to the console.
-    let _checkAlphabet = alphabet.includes(key) ? checkAnswer(key) : console.log("You must select a letter");
+    // If it is, passes it to the checkAnswer function. If not, does nothing.
+    let _checkAlphabet = alphabet.includes(key) ? checkAnswer(key) : null;
 }
 
 /**
