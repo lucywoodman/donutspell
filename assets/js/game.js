@@ -139,8 +139,7 @@ function checkIfWordComplete() {
         document.getElementById('game-title').innerHTML = "You win!";
         // Replaces the text to show amount of donut saved.
         document.getElementById('game-text').innerHTML = `
-            You get to keep ${donutLeft}% of the donut!</p>
-            <p>The answer is:
+            You keep ${donutLeft}% of the donut!<br>The answer is:</p>
         `;
         // Hides the keyboard.
         document.getElementById('keyboard').style.display = "none";
@@ -174,8 +173,7 @@ function checkIfDonutGone() {
         document.getElementById('game-title').innerHTML = "You lose!";
         // Replaces the text to show why the game is lost.
         document.getElementById('game-text').innerHTML = `
-            Oh no! Ripley ate all of the donut!</p>
-            <p>The correct answer is:
+            <p>Oh no! Ripley ate all of the donut!<br>The correct answer is:</p>
         `;
         // Displays the correct answer.
         document.getElementById('game-word').innerHTML = correctAnswer;
