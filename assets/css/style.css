@@ -32,12 +32,10 @@
     --brand-background: hsla(189, 90%, 80%, 1);
     --brand-turquoise: hsla(189, 65%, 58%, 1);
     --brand-dark-turquoise: hsla(196, 100%, 12%, 1);
-    --brand-yellow: hsla(45, 99%, 54%, 1);
-    --brand-orange: hsla(16, 88%, 58%, 1);
-    --brand-dark-orange: hsla(0, 100%, 19%, 1);
     --brand-green: hsla(70, 66%, 51%, 1);
+    --brand-dark-green: hsla(93, 100%, 12%, 1);
     --brand-purple: hsla(292, 29%, 64%, 1);
-    --brand-dark-purple: hsla(196, 100%, 12%, 1);
+    --brand-dark-purple: hsla(222, 100%, 5%, 1);
     --brand-dark-blue: hsla(235, 20%, 34%, 1);
     --text-color: #111111;
     --neutral-dark-grey: #55585b;
@@ -347,8 +345,8 @@ footer a:hover {
 }
 
 #hard {
-    color: var(--brand-dark-orange);
-    background: var(--brand-orange);
+    color: var(--brand-dark-green);
+    background: var(--brand-green);
 }
 
 #easy:hover,
