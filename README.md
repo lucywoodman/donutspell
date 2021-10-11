@@ -1,6 +1,8 @@
 # Donutspell
 
-A word game for 8-9 year olds. Collect the donuts before Ripley the dog eats them by spelling the words correctly.
+A word game for 6-9 year olds. Save the donut before Ripley the dog eats them by guessing the hidden words.
+
+The words used for the game are common "tricky" to spell words, as set by the UK school curriculum. The "Easy" level uses year 1 words (ages 5-6), the "Tricky" level uses year 2 words (ages 6-7), and the "Difficult" level uses years 3 and 4 words (ages 7-9).
 
 [Live webpage](https://lucywoodman.github.io/donutspell/)
 
