@@ -31,12 +31,16 @@
     /* || Colours */
     --brand-background: hsla(189, 90%, 80%, 1);
     --brand-turquoise: hsla(189, 65%, 58%, 1);
+    --brand-dark-turquoise: hsla(196, 100%, 12%, 1);
     --brand-yellow: hsla(45, 99%, 54%, 1);
     --brand-orange: hsla(16, 88%, 58%, 1);
+    --brand-dark-orange: hsla(0, 100%, 19%, 1);
     --brand-green: hsla(70, 66%, 51%, 1);
     --brand-purple: hsla(292, 29%, 64%, 1);
+    --brand-dark-purple: hsla(196, 100%, 12%, 1);
     --brand-dark-blue: hsla(235, 20%, 34%, 1);
     --text-color: #111111;
+    --neutral-dark-grey: #55585b;
     --neutral-grey: #727578;
     --neutral-light-grey: #ebebeb;
     --white: #fffefe;
@@ -133,13 +137,13 @@ p {
 a {
     color: var(--text-color);
     text-decoration: none;
-    transition: color .3s ease-out;
     padding: 1rem 2rem;
 }
 
 a:hover,
 a:active {
-    color: var(--brand-background);
+    transition: all .3s ease-in-out;
+    color: var(--brand-dark-blue);
 }
 
 button,
@@ -150,10 +154,9 @@ button,
     border-radius: 12px;
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-bold);
+    color: var(--brand-dark-turquoise);
     background: var(--brand-turquoise);
     cursor: pointer;
-    transition: background .3s ease-out;
-    color: var(--white);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -162,6 +165,7 @@ button,
 
 button:hover,
 .button:hover {
+    transition: all .3s ease-in-out;
     background: var(--brand-dark-blue);
     color: var(--white);
 }
@@ -214,21 +218,30 @@ nav {
     list-style-type: none;
 }
 
+.nav i {
+    vertical-align: -2px;
+    display: none;
+}
+
 .nav__item a {
     display: block;
     padding: 15px;
+    color: var(--neutral-dark-grey);
 }
 
 .nav__item--active a {
-    color: var(--brand-orange);
+    color: var(--text-color);
+    font-weight: var(--font-weight-bold);
 }
 
-.nav__item--active a:hover {
+.nav__item--active i {
     color: var(--brand-turquoise);
+    display: inline-flex;
 }
 
-.active .nav__item {
-    display: block;
+.nav__item a:hover,
+.nav__item--active a:hover {
+    color: #F53BC1;
 }
 
 @media all and (min-width: 1024px) {
@@ -262,6 +275,10 @@ footer {
 
 footer a {
     color: var(--white);
+}
+
+footer a:hover {
+    color: var(--brand-background);
 }
 
 .social {
@@ -320,20 +337,24 @@ footer a {
 }
 
 #easy {
+    color: var(--brand-dark-turquoise);
     background: var(--brand-turquoise);
 }
 
 #medium {
+    color: var(--brand-dark-purple);
     background: var(--brand-purple);
 }
 
 #hard {
+    color: var(--brand-dark-orange);
     background: var(--brand-orange);
 }
 
 #easy:hover,
 #medium:hover,
 #hard:hover {
+    color: var(--white);
     background: var(--brand-dark-blue);
 }
 
