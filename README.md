@@ -15,8 +15,8 @@ The words used for the game are common "tricky" to spell words, as set by the UK
     - [Target audience](#target-audience)
     - [User requirements and expectations](#user-requirements-and-expectations)
     - [User stories](#user-stories)
-      - [First-time visitors](#first-time-visitors)
-      - [Return visitors](#return-visitors)
+      - [External visitors](#external-visitors)
+      - [Site owner](#site-owner)
   - [Design](#design)
     - [Colours](#colours)
     - [Fonts](#fonts)
@@ -50,17 +50,47 @@ The words used for the game are common "tricky" to spell words, as set by the UK
 
 The user goals
 
+- To play a fun and interactive online game.
+- To improve spelling and grammar.
+- To be able to use mobile/tablet devices.
+
+The site owner goals
+
+- To provide a fun and educational game with increasing levels of difficulty to engage online users.
+- The game should be fully responsive to allow play on different devices.
+- To be able to receive user feedback/suggestions via a contact page.
+
 ## User experience
 
 ### Target audience
 
+- Children aged between 6 and 9 years old, based in the UK or learning British English.
+- Teachers or parents/guardians looking for educational websites for their students/children.
+- Someone that likes fun and quick word games.
+
 ### User requirements and expectations
+
+- A clear navigation for getting around the site.
+- To be able to find way back to the home page without using the browser's back button.
+- A quick, fun and engaging game to play.
+- A design-led experience that's a delight to see and use.
+- A colour palette and typography that considers accessibility.
+- Links and interactivity that work as expected.
+- Consistency across pages.
+- Fully responsive for viewing on any device.
 
 ### User stories
 
-#### First-time visitors
+#### External visitors
 
-#### Return visitors
+1. As a site user, I want to be able to pick a level of difficulty, so I can challenge myself or take it easy.
+2. As a site user, I want to test my spelling through the game to improve my english.
+3. As a site user, I want the game to give me hints so that I don't get stuck.
+4. As a site user, I want to be able to use either my mouse or my keyboard to choose letters.
+5. As a site user, I want feedback from the game to show how many wrong turns I have left.
+6. As a site user, I want the site to be available on different devices so my children can play.
+
+#### Site owner
 
 ## Design
 
