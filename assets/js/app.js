@@ -1,5 +1,5 @@
 (function() {
-    // Wait for the DOM to finish loading before adding level button event listeners.
+    // Waits for the DOM to finish loading before adding level button event listeners.
     document.addEventListener('DOMContentLoaded', function addLevelListeners() {
         let levelButtons = document.getElementsByClassName('level');
         
