@@ -37,6 +37,7 @@
     --brand-purple: hsla(292, 29%, 64%, 1);
     --brand-dark-purple: hsla(222, 100%, 5%, 1);
     --brand-dark-blue: hsla(235, 20%, 34%, 1);
+    --brand-pink: hsla(317, 90%, 60%, 1);
     --text-color: #111111;
     --neutral-dark-grey: #55585b;
     --neutral-grey: #727578;
@@ -239,7 +240,7 @@ nav {
 
 .nav__item a:hover,
 .nav__item--active a:hover {
-    color: #F53BC1;
+    color: var(--brand-pink);
 }
 
 @media all and (min-width: 1024px) {
@@ -513,8 +514,7 @@ footer a:hover {
     max-width: var(--width-xlg);
 }
 
-input, 
-label,
+input,
 textarea {
     font-size: var(--font-size-sm);
     display: inline-block;
@@ -536,4 +536,22 @@ textarea {
 
 .textarea {
     height: 120px;
+}
+
+input:invalid,
+textarea:invalid {
+    border: 1px solid var(--brand-pink);
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+    outline: none;
+}
+
+.form-error {
+    width: 100%;
+    padding: 0;
+    color: var(--white);
+    background: var(--brand-pink);
+    border-radius: 12px;
 }
