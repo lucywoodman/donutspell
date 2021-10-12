@@ -548,10 +548,16 @@ textarea:focus:invalid {
     outline: none;
 }
 
-.form-error {
+.error {
     width: 100%;
     padding: 0;
     color: var(--white);
     background: var(--brand-pink);
     border-radius: 12px;
+    display: block;
+    margin: -25px 0 30px 0;
+}
+
+.error.active {
+    padding: 3rem;
 }
