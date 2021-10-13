@@ -15,7 +15,7 @@
         const min = 3;
         const name = nameField.value.trim();
         if (!isRequired(name)) {
-            showError(nameField, 'Name cannot be blank.');
+            showError(nameField, 'Please enter your name.');
         } else if (!isBetween(name.length, min, max)) {
             showError(nameField, `Your name must be at least ${min} characters long.`)
         } else {
@@ -34,9 +34,9 @@
         let valid = false;
         const email = emailField.value.trim();
         if (!isRequired(email)) {
-            showError(emailField, 'Email cannot be blank.');
+            showError(emailField, 'Please enter your email address.');
         } else if (!isEmailValid(email)) {
-            showError(emailField, 'Email is not valid.')
+            showError(emailField, "The email doesn't seem to be valid. Please try again.")
         } else {
             showSuccess(emailField);
             valid = true;
@@ -54,9 +54,9 @@
         const min = 30;
         const message = messageField.value.trim();
         if (!isRequired(message)) {
-            showError(messageField, 'Username cannot be blank.');
+            showError(messageField, 'Please enter your message.');
         } else if (!isBetween(message.length, min)) {
-            showError(messageField, `Message must be at least ${min} characters.`)
+            showError(messageField, `The message must be at least ${min} characters.`)
         } else {
             showSuccess(messageField);
             valid = true;
