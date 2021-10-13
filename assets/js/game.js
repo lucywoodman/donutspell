@@ -182,6 +182,7 @@ runGame = function(){
         if (guessState === correctAnswer) {
             // Updates the title.
             document.getElementById('game-title').innerHTML = "You win!";
+            confetti();
             // Replaces the text to show amount of donut saved.
             document.getElementById('game-text').innerHTML = `
                 You keep ${donutLeft}% of the donut!<br>The answer is:</p>
