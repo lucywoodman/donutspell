@@ -46,17 +46,23 @@
                         <h2>Contact us!</h2>
                         <p>Use the form below if you find anything wrong with the game, or if you have any suggestions for future versions.</p>
                         <!-- Name field -->
-                        <label for="name">Your name*</label>
-                        <input type="text" id="name" name="name" required class="text-input">
-                        <span class="form-error" aria-live="polite"></span>
+                        <div class="form-field">
+                            <label for="name">Your name*</label>
+                            <input type="text" id="name" name="name" autocomplete="off">
+                            <small></small>
+                        </div>
                         <!-- Email field -->
-                        <label for="email">Your email address*</label>
-                        <input type="email" id="email" name="email_address" required class="text-input">
-                        <span class="form-error" aria-live="polite"></span>
+                        <div class="form-field">
+                            <label for="email">Your email address*</label>
+                            <input type="email" id="email" name="email_address" autocomplete="off">
+                            <small></small>
+                        </div>
                         <!-- Message textarea field -->
-                        <label for="message">Your message*</label>
-                        <textarea name="message" id="message" cols="30" rows="10" required class="textarea" minlength="8"></textarea>
-                        <span class="form-error" aria-live="polite"></span>
+                        <div class="form-field">
+                            <label for="message">Your message*</label>
+                            <textarea name="message" id="message" autocomplete="off"></textarea>
+                            <small></small>
+                        </div>
                         <!-- Submit button -->
                         <input type="submit" value="Send" class="button">
                     </form>
