@@ -16,7 +16,7 @@
         const name = nameField.value.trim();
         if (!isRequired(name)) {
             showError(nameField, 'Please enter your name.');
-        } else if (!isBetween(name.length, min, max)) {
+        } else if (!isBetween(name.length, min)) {
             showError(nameField, `Your name must be at least ${min} characters long.`)
         } else {
             showSuccess(nameField);
