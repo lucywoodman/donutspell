@@ -12,13 +12,12 @@
      */
     const checkName = () => {
         let valid = false;
-        const min = 3,
-            max = 25;
+        const min = 3;
         const name = nameField.value.trim();
         if (!isRequired(name)) {
             showError(nameField, 'Name cannot be blank.');
         } else if (!isBetween(name.length, min, max)) {
-            showError(nameField, `Name must be between ${min} and ${max} characters.`)
+            showError(nameField, `Your name must be at least ${min} characters long.`)
         } else {
             showSuccess(nameField);
             valid = true;
