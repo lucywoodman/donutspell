@@ -1,10 +1,15 @@
 (function() {
+    // Set up variables for the contact form.
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
     const messageField = document.getElementById('message');
-
     const form = document.getElementById('contact-form');
 
+    /**
+     * Runs through field checking functions (isRequired and isBetween).
+     * Displays the relevant error messaging and returns valid as true/false.
+     * @returns boolean.
+     */
     const checkName = () => {
         let valid = false;
         const min = 3,
@@ -21,6 +26,11 @@
         return valid;
     };
 
+    /**
+     * Runs through field checking functions (isRequired and isEmailValid).
+     * Displays the relevant error messaging and returns valid as true/false.
+     * @returns boolean.
+     */
     const checkEmail = () => {
         let valid = false;
         const email = emailField.value.trim();
@@ -35,6 +45,11 @@
         return valid;
     };
 
+    /**
+     * Runs through field checking functions (isRequired and isBetween).
+     * Displays the relevant error messaging and returns valid as true/false.
+     * @returns boolean.
+     */
     const checkMessage = () => {
         let valid = false;
         const min = 30;
@@ -50,14 +65,27 @@
         return valid;
     };
 
+    /**
+     * Uses regex to check the contents of the email field and returns true or false.
+     * @param {string} email - contents of email field.
+     * @returns boolean.
+     */
     const isEmailValid = (email) => {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
     };
 
+    // Check to see that a field has content.
     const isRequired = value => value === '' ? false : true;
+    // Check the content is between the set min and max characters.
     const isBetween = (length, min, max) => length < min || length > max ? false : true;
 
+    /**
+     * Get the form's input element's parent element, remove the success class.
+     * Then add the error class and show the error message.
+     * @param {input} input - form input elements.
+     * @param {string} message - error message.
+     */
     const showError = (input, message) => {
         // get the form-field element
         const formField = input.parentElement;
@@ -70,6 +98,11 @@
         error.textContent = message;
     };
     
+    /**
+     * Get the form's input element's parent element, remove the error class.
+     * Then add the success class and hide the error message.
+     * @param {input} input - form input elements.
+     */
     const showSuccess = (input) => {
         // get the form-field element
         const formField = input.parentElement;
@@ -113,7 +146,8 @@
         }
     });
     
-    
+    // Use debouncing technique to improve form performance.
+    // Helpful to limit the number of times a function gets called.
     const debounce = (fn, delay = 500) => {
         let timeoutId;
         return (...args) => {
@@ -153,5 +187,4 @@
                 `;
         document.getElementsByClassName('form')[0].innerHTML = html;
     }
-    
 })();
