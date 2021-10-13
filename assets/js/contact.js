@@ -1,4 +1,9 @@
 (function() {
+    /**
+     * Form validation code from https://www.javascripttutorial.net/javascript-dom/javascript-form-validation/
+     * with changes to make it work for this site and with EmailJS API.
+     */
+
     // Set up variables for the contact form.
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
