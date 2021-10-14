@@ -151,7 +151,7 @@ button,
 .button {
     display: block;
     width: 100%;
-    padding: 2rem 2.2rem 2rem;
+    padding: 2rem 2.2rem;
     border-radius: 12px;
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-bold);
