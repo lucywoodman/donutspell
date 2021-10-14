@@ -422,6 +422,7 @@ footer a:hover {
     font-family: var(--font-game);
     font-size: var(--font-size-game);
     letter-spacing: 1rem;
+    font-variant-ligatures: none;
 }
 
 #hint {
