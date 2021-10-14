@@ -467,9 +467,11 @@ footer a:hover {
     height: 45px;
 }
 
-.key:hover {
+.key:hover,
+.key:active {
     cursor: pointer;
     background: var(--neutral-light-grey);
+    color: var(--brand-pink);
 }
 
 .key:disabled {
