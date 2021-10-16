@@ -358,6 +358,18 @@ The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) wa
 
 ### Accessibility
 
+The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) was used to ensure the website met high accessibility standards. All pages pass with 0 errors.
+
+<details><summary>Home page</summary>
+  <img src="docs/validation/wave__home.png">
+</details>
+<details><summary>Contact page</summary>
+  <img src="docs/validation/wave__contact.png">
+</details>
+<details><summary>404 page</summary>
+  <img src="docs/validation/wave__404.png">
+</details>
+
 ### Performance
 
 ### Performing tests on various devices
