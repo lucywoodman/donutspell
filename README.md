@@ -102,7 +102,17 @@ The site owner goals
 
 ## Design
 
+Inspired by one of my children's favourite TV shows, "Hey Duggee", I came up with the following keywords for the brand:
+
+- Fun
+- Friendly
+- Creative
+
 ### Colours
+
+The site is designed using a bright and colourful palette (fun, creative) that feels child-centric without being childish.
+
+![Palette](docs/design/palette.png)
 
 ### Fonts
 
