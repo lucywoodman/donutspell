@@ -424,7 +424,7 @@ The website was tested on the following browsers:
   <img src="docs/testing/testing__game_1.png">
 </details>
 
-1. As a user, I want the game to give me hints, so that I don't get stuck.
+3. As a user, I want the game to give me hints, so that I don't get stuck.
 
 | **Feature** | **Action**                          | **Expected Result**                                                   | **Actual Result** |
 | ----------- | ----------------------------------- | --------------------------------------------------------------------- | ----------------- |
