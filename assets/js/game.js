@@ -196,6 +196,8 @@ runGame = function(){
             document.getElementById('restart').style.display = "block";
             // Removes the keyboard event listeners.
             document.removeEventListener('keydown', keyboardKeyHandler);
+            // Sets the keyboard focus to the answer.
+            document.getElementById('game-word').focus();
         } else {
             return;
         }
@@ -232,6 +234,8 @@ runGame = function(){
             document.getElementById('restart').style.display = "block";
             // Removes the keyboard event listeners.
             document.removeEventListener('keydown', keyboardKeyHandler);
+            // Sets the keyboard focus to the answer.
+            document.getElementById('game-word').focus();
         }
     }
 
