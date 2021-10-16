@@ -587,9 +587,13 @@ The website was tested on the following browsers:
 
 ## Bugs
 
-| **Bug**     | **Fix**     |
-| ----------- | ----------- |
-| Example bug | Example fix |
+| **Bug**                                                          | **Fix**                                                                                                           |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Underscores merge together on certain browsers                   | Due to the font ligatures. Add `font-variant-ligatures: none;` to the CSS                                         |
+| Keyboard input continues to reduce the donut after the game ends | Remove the event listener when updating to win/lose content                                                       |
+| Some words return "undefined" for their hint                     | Due to the API not having short definitions for every word. Added an error message instead of showing "undefined" |
+| Form field error doesn't work for minimum characters             | Remove max argument from the function after having removed it from the variable                                   |
+| Ripley doesn't sit on the footer on some screens                 | Moved Ripley's div to outside of the main wrapper div                                                             |
 
 ## Deployment
 
