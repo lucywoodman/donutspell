@@ -22,7 +22,7 @@
         if (!isRequired(name)) {
             showError(nameField, 'Please enter your name.');
         } else if (!isBetween(name.length, min)) {
-            showError(nameField, `Your name must be at least ${min} characters long.`)
+            showError(nameField, `Your name must be at least ${min} characters long.`);
         } else {
             showSuccess(nameField);
             valid = true;
@@ -41,7 +41,7 @@
         if (!isRequired(email)) {
             showError(emailField, 'Please enter your email address.');
         } else if (!isEmailValid(email)) {
-            showError(emailField, "The email doesn't seem to be valid. Please try again.")
+            showError(emailField, "The email doesn't seem to be valid. Please try again.");
         } else {
             showSuccess(emailField);
             valid = true;
@@ -61,7 +61,7 @@
         if (!isRequired(message)) {
             showError(messageField, 'Please enter your message.');
         } else if (!isBetween(message.length, min)) {
-            showError(messageField, `The message must be at least ${min} characters.`)
+            showError(messageField, `The message must be at least ${min} characters.`);
         } else {
             showSuccess(messageField);
             valid = true;
@@ -118,7 +118,7 @@
         // hide the error message
         const error = formField.querySelector('small');
         error.textContent = '';
-    }
+    };
     
     
     form.addEventListener('submit', function (e) {
@@ -161,7 +161,7 @@
             }
             // setup a new timer
             timeoutId = setTimeout(() => {
-                fn.apply(null, args)
+                fn.apply(null, args);
             }, delay);
         };
     };
