@@ -48,11 +48,13 @@ The words used for the game are common "tricky" to spell words, as set by the UK
     - [Testing user stories](#testing-user-stories)
   - [Bugs](#bugs)
   - [Deployment](#deployment)
+  - [APIs](#apis)
+    - [EmailJS](#emailjs)
+    - [Mirriam-Webster](#mirriam-webster)
   - [Credits](#credits)
     - [Media](#media)
     - [Code](#code)
     - [Reference material](#reference-material)
-    - [Other](#other)
   - [Acknowledgements](#acknowledgements)
 
 
@@ -619,15 +621,39 @@ You can clone the repository by following these steps:
 6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
 7. Press Enter to create your local clone.
 
+## APIs
+
+### EmailJS
+
+1. Create an account at [emailjs.com](https://emailjs.com)
+2. Add a new email service (I use Gmail), and copy the "Service ID"
+3. Create a new email template, and copy the "Template ID". Make sure to match up the HTML field IDs match up with the template variable
+4. Head to "Integration > Browser" and copy the "User ID". Also copy the first script tag
+5. Paste the script tag in your site's head element
+6. In the JavaScript for the contact form, create an event listener for the submit event. Add the emailJS `init` and `sendform` methods to connect to your account and send the form values
+7. [Here's their documentation](https://www.emailjs.com/docs/sdk/send-form/) for further reading.
+
+### Mirriam-Webster
+
+1. Register for an account at [Mirriam-Webster Developer Center](https://dictionaryapi.com/). Choose which APIs you'd like access to (max of two - I use the "Learner's Dictionary").
+2. With the help of the [JSON Documentation](https://dictionaryapi.com/products/json) and [Postman](https://www.postman.com/) (or other API testing tool), narrow down what data you'd like to use from the API (I use the short definition)
+3. In JavaScript, create a fetch request to grab the data from the API, convert it to JSON. Pull the relevant data from the response and save it to a variable or pass it through a function.
+
 ## Credits
 
 ### Media
 
+- Illustrations - [Blush](https://blush.design/)
+- Icons - [Phosphoricons](https://phosphoricons.com/)
+
 ### Code
+
+- Confetti explosion on winning page - [catdad on GitHub](https://github.com/catdad/canvas-confetti)
+- JS form validation - [JavaScript Tutorial](https://www.javascripttutorial.net/javascript-dom/javascript-form-validation/)
 
 ### Reference material
 
-### Other
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - general syntax reference.
 
 ## Acknowledgements
 
