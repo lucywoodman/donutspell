@@ -24,6 +24,16 @@ The words used for the game are common "tricky" to spell words, as set by the UK
     - [Structure](#structure)
     - [Wireframes](#wireframes)
   - [Features](#features)
+    - [1. Logo and navigation](#1-logo-and-navigation)
+    - [2. Introduction](#2-introduction)
+    - [3. Footer](#3-footer)
+    - [4. Main game](#4-main-game)
+    - [5. Gameover (win)](#5-gameover-win)
+    - [6. Gameover (lose)](#6-gameover-lose)
+    - [7. Contact page](#7-contact-page)
+    - [8. Form confirmation page](#8-form-confirmation-page)
+    - [9. 404 page](#9-404-page)
+    - [10. Fully responsive site](#10-fully-responsive-site)
   - [Technologies used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks and tools](#frameworks-and-tools)
@@ -152,6 +162,28 @@ The site uses the well-known and well-experienced web design pattern, to provide
 
 ## Features
 
+The site consists of 3 pages and 10 features.
+
+### 1. Logo and navigation
+
+### 2. Introduction
+
+### 3. Footer
+
+### 4. Main game
+
+### 5. Gameover (win)
+
+### 6. Gameover (lose)
+
+### 7. Contact page
+
+### 8. Form confirmation page
+
+### 9. 404 page
+
+### 10. Fully responsive site
+
 ## Technologies used
 
 ### Languages
@@ -165,7 +197,8 @@ The site uses the well-known and well-experienced web design pattern, to provide
 <details><summary>Research, planning and wireframes</summary>
 <ol>
    <li>VSCode (markdown)</li>
-   <li>Figma for wireframes and notes</li>
+   <li>Dribbble for inspiration</li>
+   <li>Figma for wireframes</li>
 </ol>
 </details>
 
