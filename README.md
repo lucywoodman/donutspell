@@ -100,16 +100,15 @@ The site owner goals
 5. As a user, I want feedback from the game to show how many wrong turns I have left.
 6. As a user, I want the site to be available on different devices, so my children/students can play.
 7. As a user, I want confirmation of whether I've won the game and what the correct answer is.
-8. As a user, I want to see validation when filling in the form, so I know I complete it correctly.
-9. As a user, I want confirmation that my feedback has been submitted from the contact form.
+8. As a user, I want to see validation and feedback when filling in the form, so I know I complete it correctly.
 
 #### Site owner
 
-10. As a site owner, I want to provide a fun and engaging game for users, that has an educational aspect to help teachers/children.
-11. As a site owner, I want users to be able to contact us with feedback or suggestions.
-12. As a site owner, I don't want invalid form submissions.
-13. As a site owner, I want our social links to be available for users to find.
-14. As a site owner, I want users to be able to get back to the homepage without using the browser's back button.
+9. As a site owner, I want to provide a fun and engaging game for users, that has an educational aspect to help teachers/children.
+10. As a site owner, I want users to be able to contact us with feedback or suggestions.
+11. As a site owner, I don't want invalid form submissions.
+12. As a site owner, I want our social links to be available for users to find.
+13. As a site owner, I want users to be able to get back to the homepage without using the browser's back button.
 
 ## Design
 
@@ -169,7 +168,7 @@ The site consists of 3 pages and 10 features.
 
 The logo and navigation are predictably at the top of every page. The header is fully responsive; with the navigation menu only having two links, it sits below the logo on smaller screens. The main page links are included in the navigation, with the currently active page highlighted where applicable.
 
-- User stories covered: 6, 14
+- User stories covered: 6, 13
 
 ![Header](docs/features/features__home.png)
 
@@ -179,7 +178,7 @@ The content of the home page introduces users to the site, explains the site's p
 
 The page is simple and free of clutter and distractions, making the game the main focus of the site.
 
-- User stories covered: 1, 6, 10
+- User stories covered: 1, 6
 
 ![Hero](docs/features/features__hero.png)
 
@@ -187,7 +186,7 @@ The page is simple and free of clutter and distractions, making the game the mai
 
 The footer is predictably at the bottom of every page. It's clean and simple, with the social media links to the left side. Ripley's tail is overhanging as if she's sitting on the footer, for a bit of fun.
 
-- User stories covered: 6, 13
+- User stories covered: 6, 12
 
 ![Hero](docs/features/features__footer.png)
 
@@ -203,7 +202,7 @@ At the bottom there is the alphabet, providing the letters that can be guessed f
 
 On the right is the amount of donut left (lives left) and an illustration of a donut. There are 5 lives, or 5 sections of donut. With each incorrect answer, the donut left reduces by 20% and the illustration updates to reflect that. While not the main focus of the game, it gives a mathmatical approach to the number of lives for a touch of educational value.
 
-- User stories covered: 2, 3, 4, 5, 6, 10
+- User stories covered: 2, 3, 4, 5, 6, 9
 
 ![Hero](docs/features/features__game.png)
 
@@ -215,7 +214,7 @@ The correct answer is displayed, there's a little burst of confetti for fun, and
 
 For keyboard users, the game word has focus on this page, to make it easier to tab once for the "play again" button.
 
-- User stories covered: 2, 6, 7, 10, 14
+- User stories covered: 2, 6, 7, 9, 13
 
 ![Hero](docs/features/features__game-win.png)
 
@@ -227,7 +226,7 @@ The correct answer is displayed, along with a button to take the user back to th
 
 For keyboard users, the game word has focus on this page, to make it easier to tab once for the "play again" button.
 
-- User stories covered: 2, 6, 7, 10, 14
+- User stories covered: 2, 6, 7, 9, 13
 
 ![Hero](docs/features/features__game-lose.png)
 
@@ -239,7 +238,7 @@ The form is validated "on the fly" to give fast feedback to the user if one of t
 
 When the field is corrected and validates, the error disappears and the border turns green. The user can then submit the form.
 
-- User stories covered: 6, 8, 9, 11, 12
+- User stories covered: 6, 8, 10, 11
 
 | Contact form (default state)                  | Contact form (error state)                    |
 | --------------------------------------------- | --------------------------------------------- |
@@ -249,7 +248,7 @@ When the field is corrected and validates, the error disappears and the border t
 
 When the form is successfully submitted, the site displays a success message, along with a thank you, and a button to return to the home page.
 
-- User stories covered: 6, 8, 9, 11, 12, 14
+- User stories covered: 6, 8, 10, 11, 13
 
 ![Hero](docs/features/features__contact-success.png)
 
@@ -257,7 +256,7 @@ When the form is successfully submitted, the site displays a success message, al
 
 If a user happens upon a page that doesn't exist on the site, they will be shown the 404 page. This explains what happened (Ripley chewed the page, probably), and provides a button to return to the home page.
 
-- User stories covered: 6, 14
+- User stories covered: 6, 13
 
 ![Hero](docs/features/features__404.png)
 
@@ -402,6 +401,96 @@ The website was tested on the following browsers:
 - Safari
 
 ### Testing user stories
+
+1. As a user, I want to be able to pick a level of difficulty, so I can challenge myself.
+
+| **Feature**  | **Action**     | **Expected Result**                                                          | **Actual Result** |
+| ------------ | -------------- | ---------------------------------------------------------------------------- | ----------------- |
+| Introduction | Visit the site | To be able to choose a level, and the gameplay to relfect the level selected | Works as expected |
+
+2. As a user, I want to test my spelling through the game to improve my english.
+
+| **Feature**      | **Action**                                                                                                | **Expected Result**                                                | **Actual Result** |
+| ---------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ----------------- |
+| Main game        | Access the game by choosing a level. Guess the hidden words by choosing letters with the alphabet buttons | Feedback from the game depending on if the guess is right or wrong | Works as expected |
+| Main game (win)  | Guess a letter not included in the hidden word.                                                           | Feedback from the game with correct letter shown                   | Works as expected |
+| Main game (lose) | Guess a letter not included in the hidden word.                                                           | Feedback from the game with reduced lives left (donut left)        | Works as expected |
+
+3. As a user, I want the game to give me hints, so that I don't get stuck.
+
+| **Feature** | **Action**                          | **Expected Result**                                                   | **Actual Result** |
+| ----------- | ----------------------------------- | --------------------------------------------------------------------- | ----------------- |
+| Main game   | Access the game by choosing a level | See a hint for the hidden word, or a message if no hint is available. | Works as expected |
+
+4. As a user, I want to be able to use either my mouse or my keyboard to choose letters.
+
+| **Feature**      | **Action**                                                                                                        | **Expected Result**                                                                                                                          | **Actual Result** |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| Alphabet buttons | Access the game by choosing a level. Choose letters with a mouse for the buttons on the screen, or use a keyboard | Feedback from the alphabet buttons to show which letters have been selected. The game status to update depending on correct/incorrect guess. | Works as expected |
+
+5. As a user, I want feedback from the game to show how many wrong turns I have left.
+
+| **Feature** | **Action**                                                      | **Expected Result**                                        | **Actual Result** |
+| ----------- | --------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Main game   | Access the game by choosing a level, choose an incorrect letter | The game status to update with the lives left (donut left) | Works as expected |
+
+6. As a user, I want the site to be available on different devices, so my children/students can play.
+
+| **Feature**            | **Action**                                                       | **Expected Result**                  | **Actual Result** |
+| ---------------------- | ---------------------------------------------------------------- | ------------------------------------ | ----------------- |
+| Home page              | Visit home page on a mobile device                               | The site to work on a smaller screen | Works as expected |
+| Main game              | Access the game by choosing a level, play the game               | The site to work on a smaller screen | Works as expected |
+| Main game (win)        | Win a game                                                       | The site to work on a smaller screen | Works as expected |
+| Main game (lose)       | Lose a game                                                      | The site to work on a smaller screen | Works as expected |
+| Contact page           | Visit contact page on a mobile device, enter details to the form | The site to work on a smaller screen | Works as expected |
+| Contact page (success) | Submit a valid form                                              | The site to work on a smaller screen | Works as expected |
+| 404 page               | Trigger a 404                                                    | The site to work on a smaller screen | Works as expected |
+
+7. As a user, I want confirmation of whether I've won the game and what the correct answer is.
+
+| **Feature**      | **Action**  | **Expected Result**                                    | **Actual Result** |
+| ---------------- | ----------- | ------------------------------------------------------ | ----------------- |
+| Main game (win)  | Win a game  | Game tells the user they won, and displays the answer  | Works as expected |
+| Main game (lose) | Lose a game | Game tells the user they lost, and displays the answer | Works as expected |
+
+8. As a user, I want to see validation when filling in the form, so I know I complete it correctly.
+
+| **Feature**            | **Action**                                    | **Expected Result**                                       | **Actual Result** |
+| ---------------------- | --------------------------------------------- | --------------------------------------------------------- | ----------------- |
+| Contact page           | Visit contact page, enter details to the form | Feedback from the form that the details entered are valid | Works as expected |
+| Contact page (success) | Submit a valid form                           | Feedback to show form was successfully submitted          | Works as expected |
+
+9.  As a site owner, I want to provide a fun and engaging game for users, that has an educational aspect to help teachers/children.
+
+| **Feature** | **Action**                                          | **Expected Result**                                                    | **Actual Result** |
+| ----------- | --------------------------------------------------- | ---------------------------------------------------------------------- | ----------------- |
+| Main game   | Access the game by selecting a level, play the game | A fun, interactive game that will help children with english and maths | Works as expected |
+
+10.  As a site owner, I want users to be able to contact us with feedback or suggestions.
+
+| **Feature**  | **Action**                                      | **Expected Result**                       | **Actual Result** |
+| ------------ | ----------------------------------------------- | ----------------------------------------- | ----------------- |
+| Contact page | Visit contact page, enter details into the form | Receive an email with the form submission | Works as expected |
+
+11.  As a site owner, I don't want invalid form submissions.
+
+| **Feature**  | **Action**                        | **Expected Result**      | **Actual Result** |
+| ------------ | --------------------------------- | ------------------------ | ----------------- |
+| Contact page | Attempt to submit an invalid form | The form does not submit | Works as expected |
+
+12.  As a site owner, I want our social links to be available for users to find.
+
+| **Feature** | **Action**           | **Expected Result**               | **Actual Result** |
+| ----------- | -------------------- | --------------------------------- | ----------------- |
+| Footer      | Scroll down any page | Find social media icons and links | Works as expected |
+
+13. As a site owner, I want users to be able to get back to the homepage without using the browser's back button.
+
+| **Feature**            | **Action**           | **Expected Result**          | **Actual Result** |
+| ---------------------- | -------------------- | ---------------------------- | ----------------- |
+| Main navigation        | Visit any page       | Find a link to the home page | Works as expected |
+| Contact form (success) | Submit a valid form  | Find a link to the home page | Works as expected |
+| 404 page               | Enter an invalid URL | Find a link to the home page | Works as expected |
 
 ## Bugs
 
