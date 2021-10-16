@@ -83,14 +83,22 @@ The site owner goals
 
 #### External visitors
 
-1. As a site user, I want to be able to pick a level of difficulty, so I can challenge myself or take it easy.
-2. As a site user, I want to test my spelling through the game to improve my english.
-3. As a site user, I want the game to give me hints so that I don't get stuck.
-4. As a site user, I want to be able to use either my mouse or my keyboard to choose letters.
-5. As a site user, I want feedback from the game to show how many wrong turns I have left.
-6. As a site user, I want the site to be available on different devices so my children can play.
+1. As a user, I want to be able to pick a level of difficulty, so I can challenge myself.
+2. As a user, I want to test my spelling through the game to improve my english.
+3. As a user, I want the game to give me hints, so that I don't get stuck.
+4. As a user, I want to be able to use either my mouse or my keyboard to choose letters.
+5. As a user, I want feedback from the game to show how many wrong turns I have left.
+6. As a user, I want the site to be available on different devices, so my children/students can play.
+7. As a user, I want confirmation of whether I've won the game and what the correct answer is.
+8. As a user, I want to see validation when filling in the form, so I know I complete it correctly.
+9. As a user, I want confirmation that my feedback has been submitted from the contact form.
 
 #### Site owner
+
+10. As a site owner, I want users to be able to contact us with feedback or suggestions.
+11. As a site owner, I don't want invalid form submissions.
+12. As a site owner, I want our social links to be available for users to find.
+13. As a site owner, I want users to be able to get back to the homepage without using the browser's back button.
 
 ## Design
 
