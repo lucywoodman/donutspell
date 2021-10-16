@@ -368,7 +368,7 @@ footer a:hover {
     z-index: 1;
     width: 120px;
     position: relative;
-    bottom: -42px;
+    bottom: -22px;
 }
 
 @media all and (min-width: 1024px) {
@@ -395,7 +395,7 @@ footer a:hover {
     #ripley {
         width: 212px;
         height: auto;
-        bottom: -34px;
+        bottom: -32px;
     }
 }
 
