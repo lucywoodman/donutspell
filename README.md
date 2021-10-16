@@ -372,6 +372,18 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) wa
 
 ### Performance
 
+[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance of the website.
+
+<details><summary>Home page</summary>
+  <img src="docs/validation/lighthouse__home.gif">
+</details>
+<details><summary>Contact page</summary>
+  <img src="docs/validation/lighthouse__contact.gif">
+</details>
+<details><summary>404 page</summary>
+  <img src="docs/validation/lighthouse__404.gif">
+</details>
+
 ### Performing tests on various devices
 
 The website was tested on the following devices:
