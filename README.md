@@ -319,9 +319,42 @@ This provides users with a consistent experience of the site, no matter the scre
 
 ### HTML validation
 
+The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website. All pages pass with 0 errors and 0 warnings.
+
+<details><summary>Home page</summary>
+  <img src="docs/validation/html__home.png">
+</details>
+<details><summary>Contact page</summary>
+  <img src="docs/validation/html__contact.png">
+</details>
+<details><summary>404 page</summary>
+  <img src="docs/validation/html__404.png">
+</details>
+
 ### CSS validation
 
+The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS of the website. The CSS passes with 0 errors. There are some warnings due to using CSS variables (custom properties), which the validator does not support yet. See the [CSS Validator's GitHub](https://github.com/w3c/css-validator/pull/173#issuecomment-878349650) for more information.
+
+<details><summary>style.css</summary>
+  <img src="docs/validation/css__validation.png">
+</details>
+
 ### JavaScript validation
+
+[JSHint](https://jshint.com/) was used to validate the JavaScript of the website. No issues were found, other than some variables that are defined outside of the scope of the file.
+
+<details><summary>app.js</summary>
+  <img src="docs/validation/js__app.png">
+</details>
+<details><summary>contact.js</summary>
+  <img src="docs/validation/js__contact.png">
+</details>
+<details><summary>game.js</summary>
+  <img src="docs/validation/js__game.png">
+</details>
+<details><summary>words.js</summary>
+  <img src="docs/validation/js__words.png">
+</details>
 
 ### Accessibility
 
@@ -329,7 +362,7 @@ This provides users with a consistent experience of the site, no matter the scre
 
 ### Performing tests on various devices
 
-he website was tested on the following devices:
+The website was tested on the following devices:
 
 - Apple MacBook Pro, Apple MacBook Air
 - iPhone X, iPhone 8, iPhone SE
