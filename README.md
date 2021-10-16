@@ -110,17 +110,45 @@ Inspired by one of my children's favourite TV shows, "Hey Duggee", I came up wit
 
 ### Colours
 
-The site is designed using a bright and colourful palette (fun, creative) that feels child-centric without being childish.
+The site is designed using a bright and colourful palette (fun, creative) that feels child-centric (friendly) without being childish.
 
 ![Palette](docs/design/palette.png)
 
 ### Fonts
 
+The friendly and rounded Nunito is used as the header font, with the cleaner but still friendly and rounded Poppins used for the body font. The monospace font Fira Code is used for the game word to prevent it from moving about too much while the letters are guessed.
+
 ### Imagery
+
+The imagery used on the site has the brand colours throughout, to help the site to flow, look professional and avoid feeling disjointed. The illustrations are simple and rounded, to continue with the friendly, approachable feel. They're colourful and bright, to bring in the fun and creativity for the brand and to help the site catch the eye.
 
 ### Structure
 
+The site uses the well-known and well-experienced web design pattern, to provide a familar and predictable experience to users. With the logo on the top left and main navigation in the top right. Each page has the same structure to avoid confusion, with the same footer (containing the social media links) on every page.
+
 ### Wireframes
+
+<details><summary>Home page</summary>
+  <img src="docs/wireframes/home__wireframe.png">
+</details>
+<details><summary>Game</summary>
+  <img src="docs/wireframes/game__wireframe.png">
+</details>
+<details><summary>Winning game</summary>
+  <img src="docs/wireframes/game-win__wireframe.png">
+</details>
+<details><summary>Losing game</summary>
+  <img src="docs/wireframes/game-lose__wireframe.png">
+</details>
+<details><summary>Contact page</summary>
+  <img src="docs/wireframes/contact__wireframe.png">
+</details>
+<details><summary>Successful form submission page</summary>
+  <img src="docs/wireframes/contact-success__wireframe.png">
+</details>
+<details><summary>404 page</summary>
+  <img src="docs/wireframes/404__wireframe.png">
+</details>
 
 ## Features
 
