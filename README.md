@@ -105,10 +105,11 @@ The site owner goals
 
 #### Site owner
 
-10. As a site owner, I want users to be able to contact us with feedback or suggestions.
-11. As a site owner, I don't want invalid form submissions.
-12. As a site owner, I want our social links to be available for users to find.
-13. As a site owner, I want users to be able to get back to the homepage without using the browser's back button.
+10. As a site owner, I want to provide a fun and engaging game for users, that has an educational aspect to help teachers/children.
+11. As a site owner, I want users to be able to contact us with feedback or suggestions.
+12. As a site owner, I don't want invalid form submissions.
+13. As a site owner, I want our social links to be available for users to find.
+14. As a site owner, I want users to be able to get back to the homepage without using the browser's back button.
 
 ## Design
 
@@ -168,51 +169,105 @@ The site consists of 3 pages and 10 features.
 
 The logo and navigation are predictably at the top of every page. The header is fully responsive; with the navigation menu only having two links, it sits below the logo on smaller screens. The main page links are included in the navigation, with the currently active page highlighted where applicable.
 
+- User stories covered: 6, 14
+
 ![Header](docs/features/features__home.png)
 
 ### 2. Introduction
 
+The content of the home page introduces users to the site, explains the site's purpose and offers a starting point for the game with a choice of difficulty levels. Below this content is an illustration of Ripley the dog, with a fun background.
 
+The page is simple and free of clutter and distractions, making the game the main focus of the site.
+
+- User stories covered: 1, 6, 10
 
 ![Hero](docs/features/features__hero.png)
 
 ### 3. Footer
 
+The footer is predictably at the bottom of every page. It's clean and simple, with the social media links to the left side. Ripley's tail is overhanging as if she's sitting on the footer, for a bit of fun.
+
+- User stories covered: 6, 13
 
 ![Hero](docs/features/features__footer.png)
 
 ### 4. Main game
 
+The main game content includes a brief how-to-play description on the left, with the hidden guess word below. The game chooses the word at random from one of three lists (easy, medium, hard, depending on the level chosen) and replaces the letters with underscores to hide the word.
+
+The words used for the game are common "tricky" to spell words, as set by the UK school curriculum. The "Easy" level uses year 1 words (ages 5-6), the "Tricky" level uses year 2 words (ages 6-7), and the "Difficult" level uses years 3 and 4 words (ages 7-9).
+
+Underneath the game word is a small hint. The game uses an API to fetch a short description as a clue.
+
+At the bottom there is the alphabet, providing the letters that can be guessed for the game word. These can be selected either with a mouse or with the keyboard. The letters will reduce their opacity once selected and become disabled, so they cannot be chosen twice.
+
+On the right is the amount of donut left (lives left) and an illustration of a donut. There are 5 lives, or 5 sections of donut. With each incorrect answer, the donut left reduces by 20% and the illustration updates to reflect that. While not the main focus of the game, it gives a mathmatical approach to the number of lives for a touch of educational value.
+
+- User stories covered: 2, 3, 4, 5, 6, 10
 
 ![Hero](docs/features/features__game.png)
 
 ### 5. Gameover (win)
 
+The winning content states that the user has won. It also notes how much of the donut is left for the user to "keep" and confirms this with the illustration on the right.
+
+The correct answer is displayed, there's a little burst of confetti for fun, and below is a button to take the user back to the home page to play again.
+
+For keyboard users, the game word has focus on this page, to make it easier to tab once for the "play again" button.
+
+- User stories covered: 2, 6, 7, 10, 14
 
 ![Hero](docs/features/features__game-win.png)
 
 ### 6. Gameover (lose)
 
+The losing content states that the user has lost. It also notes that Ripley has eaten all of the donut and confirms this with the illustration on the right.
+
+The correct answer is displayed, along with a button to take the user back to the home page to play again.
+
+For keyboard users, the game word has focus on this page, to make it easier to tab once for the "play again" button.
+
+- User stories covered: 2, 6, 7, 10, 14
 
 ![Hero](docs/features/features__game-lose.png)
 
 ### 7. Contact page
 
+A straight-forward form with three fields; name, email and message. To encourage users to get in touch with any feedback or suggestions for the game.
 
-![Hero](docs/features/features__contact.png)
+The form is validated "on the fly" to give fast feedback to the user if one of the fields are not correctly filled out. This displays as a small, friendly, red error message below the field, and the field's border turns red. The user is unable to submit the form if there are any errors.
+
+When the field is corrected and validates, the error disappears and the border turns green. The user can then submit the form.
+
+- User stories covered: 6, 8, 9, 11, 12
+
+| Contact form (default state)                  | Contact form (error state)                    |
+| --------------------------------------------- | --------------------------------------------- |
+| ![Hero](docs/features/features__contact1.png) | ![Hero](docs/features/features__contact2.png) |
 
 ### 8. Form confirmation page
 
+When the form is successfully submitted, the site displays a success message, along with a thank you, and a button to return to the home page.
+
+- User stories covered: 6, 8, 9, 11, 12, 14
 
 ![Hero](docs/features/features__contact-success.png)
 
 ### 9. 404 page
 
+If a user happens upon a page that doesn't exist on the site, they will be shown the 404 page. This explains what happened (Ripley chewed the page, probably), and provides a button to return to the home page.
+
+- User stories covered: 6, 14
 
 ![Hero](docs/features/features__404.png)
 
 ### 10. Fully responsive site
 
+The site has been built using the mobile first methodology. This means that the base CSS code is for mobile screens, and the media queries build upon that for the larger screen sizes.
+
+This provides users with a consistent experience of the site, no matter the screensize. Allowing users of different ages and devices to enjoy the site.
+
+- User stories covered: 6
 
 | Game start                                       | Main game                                        |
 | ------------------------------------------------ | ------------------------------------------------ |
