@@ -166,23 +166,57 @@ The site consists of 3 pages and 10 features.
 
 ### 1. Logo and navigation
 
+The logo and navigation are predictably at the top of every page. The header is fully responsive; with the navigation menu only having two links, it sits below the logo on smaller screens. The main page links are included in the navigation, with the currently active page highlighted where applicable.
+
+![Header](docs/features/features__home.png)
+
 ### 2. Introduction
+
+
+
+![Hero](docs/features/features__hero.png)
 
 ### 3. Footer
 
+
+![Hero](docs/features/features__footer.png)
+
 ### 4. Main game
+
+
+![Hero](docs/features/features__game.png)
 
 ### 5. Gameover (win)
 
+
+![Hero](docs/features/features__game-win.png)
+
 ### 6. Gameover (lose)
+
+
+![Hero](docs/features/features__game-lose.png)
 
 ### 7. Contact page
 
+
+![Hero](docs/features/features__contact.png)
+
 ### 8. Form confirmation page
+
+
+![Hero](docs/features/features__contact-success.png)
 
 ### 9. 404 page
 
+
+![Hero](docs/features/features__404.png)
+
 ### 10. Fully responsive site
+
+
+| Game start                                       | Main game                                        |
+| ------------------------------------------------ | ------------------------------------------------ |
+| ![Hero](docs/features/features__responsive1.png) | ![Hero](docs/features/features__responsive2.png) |
 
 ## Technologies used
 
