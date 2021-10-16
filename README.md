@@ -214,7 +214,7 @@ The correct answer is displayed, there's a little burst of confetti for fun, and
 
 For keyboard users, the game word has focus on this page, to make it easier to tab once for the "play again" button.
 
-- User stories covered: 2, 6, 7, 9, 13
+- User stories covered: 2, 6, 7, 13
 
 ![Hero](docs/features/features__game-win.png)
 
@@ -226,7 +226,7 @@ The correct answer is displayed, along with a button to take the user back to th
 
 For keyboard users, the game word has focus on this page, to make it easier to tab once for the "play again" button.
 
-- User stories covered: 2, 6, 7, 9, 13
+- User stories covered: 2, 6, 7, 13
 
 ![Hero](docs/features/features__game-lose.png)
 
@@ -248,7 +248,7 @@ When the field is corrected and validates, the error disappears and the border t
 
 When the form is successfully submitted, the site displays a success message, along with a thank you, and a button to return to the home page.
 
-- User stories covered: 6, 8, 10, 11, 13
+- User stories covered: 6, 8, 13
 
 ![Hero](docs/features/features__contact-success.png)
 
@@ -408,19 +408,31 @@ The website was tested on the following browsers:
 | ------------ | -------------- | ---------------------------------------------------------------------------- | ----------------- |
 | Introduction | Visit the site | To be able to choose a level, and the gameplay to relfect the level selected | Works as expected |
 
+<details><summary>Screenshot</summary>
+  <img src="docs/testing/testing__levels_1.png">
+</details>
+
 2. As a user, I want to test my spelling through the game to improve my english.
 
 | **Feature**      | **Action**                                                                                                | **Expected Result**                                                | **Actual Result** |
 | ---------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ----------------- |
 | Main game        | Access the game by choosing a level. Guess the hidden words by choosing letters with the alphabet buttons | Feedback from the game depending on if the guess is right or wrong | Works as expected |
-| Main game (win)  | Guess a letter not included in the hidden word.                                                           | Feedback from the game with correct letter shown                   | Works as expected |
+| Main game (win)  | Guess a correct letter included in the hidden word.                                                       | Feedback from the game with correct letter shown                   | Works as expected |
 | Main game (lose) | Guess a letter not included in the hidden word.                                                           | Feedback from the game with reduced lives left (donut left)        | Works as expected |
 
-3. As a user, I want the game to give me hints, so that I don't get stuck.
+<details><summary>Screenshot</summary>
+  <img src="docs/testing/testing__game_1.png">
+</details>
+
+1. As a user, I want the game to give me hints, so that I don't get stuck.
 
 | **Feature** | **Action**                          | **Expected Result**                                                   | **Actual Result** |
 | ----------- | ----------------------------------- | --------------------------------------------------------------------- | ----------------- |
 | Main game   | Access the game by choosing a level | See a hint for the hidden word, or a message if no hint is available. | Works as expected |
+
+<details><summary>Screenshot</summary>
+  <img src="docs/testing/testing__game_2.png">
+</details>
 
 4. As a user, I want to be able to use either my mouse or my keyboard to choose letters.
 
@@ -428,11 +440,19 @@ The website was tested on the following browsers:
 | ---------------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | Alphabet buttons | Access the game by choosing a level. Choose letters with a mouse for the buttons on the screen, or use a keyboard | Feedback from the alphabet buttons to show which letters have been selected. The game status to update depending on correct/incorrect guess. | Works as expected |
 
+<details><summary>Screenshot</summary>
+  <img src="docs/testing/testing__game_3.png">
+</details>
+
 5. As a user, I want feedback from the game to show how many wrong turns I have left.
 
 | **Feature** | **Action**                                                      | **Expected Result**                                        | **Actual Result** |
 | ----------- | --------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
 | Main game   | Access the game by choosing a level, choose an incorrect letter | The game status to update with the lives left (donut left) | Works as expected |
+
+<details><summary>Screenshot</summary>
+  <img src="docs/testing/testing__game_4.png">
+</details>
 
 6. As a user, I want the site to be available on different devices, so my children/students can play.
 
@@ -446,12 +466,41 @@ The website was tested on the following browsers:
 | Contact page (success) | Submit a valid form                                              | The site to work on a smaller screen | Works as expected |
 | 404 page               | Trigger a 404                                                    | The site to work on a smaller screen | Works as expected |
 
+<details><summary>Screenshot 1</summary>
+  <img src="docs/testing/testing__mobile_1.png">
+</details>
+<details><summary>Screenshot 2</summary>
+  <img src="docs/testing/testing__mobile_2.png">
+</details>
+<details><summary>Screenshot 3</summary>
+  <img src="docs/testing/testing__mobile_3.png">
+</details>
+<details><summary>Screenshot 4</summary>
+  <img src="docs/testing/testing__mobile_4.png">
+</details>
+<details><summary>Screenshot 5</summary>
+  <img src="docs/testing/testing__mobile_5.png">
+</details>
+<details><summary>Screenshot 6</summary>
+  <img src="docs/testing/testing__mobile_6.png">
+</details>
+<details><summary>Screenshot 7</summary>
+  <img src="docs/testing/testing__mobile_7.png">
+</details>
+
 7. As a user, I want confirmation of whether I've won the game and what the correct answer is.
 
 | **Feature**      | **Action**  | **Expected Result**                                    | **Actual Result** |
 | ---------------- | ----------- | ------------------------------------------------------ | ----------------- |
 | Main game (win)  | Win a game  | Game tells the user they won, and displays the answer  | Works as expected |
 | Main game (lose) | Lose a game | Game tells the user they lost, and displays the answer | Works as expected |
+
+<details><summary>Screenshot 1</summary>
+  <img src="docs/testing/testing__game_win.png">
+</details>
+<details><summary>Screenshot 2</summary>
+  <img src="docs/testing/testing__game_lose.png">
+</details>
 
 8. As a user, I want to see validation when filling in the form, so I know I complete it correctly.
 
@@ -460,11 +509,25 @@ The website was tested on the following browsers:
 | Contact page           | Visit contact page, enter details to the form | Feedback from the form that the details entered are valid | Works as expected |
 | Contact page (success) | Submit a valid form                           | Feedback to show form was successfully submitted          | Works as expected |
 
+<details><summary>Screenshot 1</summary>
+  <img src="docs/testing/testing__contact_1.png">
+</details>
+<details><summary>Screenshot 2</summary>
+  <img src="docs/testing/testing__contact_2.png">
+</details>
+<details><summary>Screenshot 3</summary>
+  <img src="docs/testing/testing__contact_3.png">
+</details>
+
 9.  As a site owner, I want to provide a fun and engaging game for users, that has an educational aspect to help teachers/children.
 
 | **Feature** | **Action**                                          | **Expected Result**                                                    | **Actual Result** |
 | ----------- | --------------------------------------------------- | ---------------------------------------------------------------------- | ----------------- |
 | Main game   | Access the game by selecting a level, play the game | A fun, interactive game that will help children with english and maths | Works as expected |
+
+<details><summary>Screenshot</summary>
+  <img src="docs/testing/testing__game_1.png">
+</details>
 
 10.  As a site owner, I want users to be able to contact us with feedback or suggestions.
 
@@ -472,11 +535,19 @@ The website was tested on the following browsers:
 | ------------ | ----------------------------------------------- | ----------------------------------------- | ----------------- |
 | Contact page | Visit contact page, enter details into the form | Receive an email with the form submission | Works as expected |
 
+<details><summary>Screenshot</summary>
+  <img src="docs/testing/testing__contact_2.png">
+</details>
+
 11.  As a site owner, I don't want invalid form submissions.
 
 | **Feature**  | **Action**                        | **Expected Result**      | **Actual Result** |
 | ------------ | --------------------------------- | ------------------------ | ----------------- |
 | Contact page | Attempt to submit an invalid form | The form does not submit | Works as expected |
+
+<details><summary>Screenshot</summary>
+  <img src="docs/testing/testing__contact_1.png">
+</details>
 
 12.  As a site owner, I want our social links to be available for users to find.
 
@@ -484,13 +555,35 @@ The website was tested on the following browsers:
 | ----------- | -------------------- | --------------------------------- | ----------------- |
 | Footer      | Scroll down any page | Find social media icons and links | Works as expected |
 
+<details><summary>Screenshot</summary>
+  <img src="docs/testing/testing__footer_1.png">
+</details>
+
 13. As a site owner, I want users to be able to get back to the homepage without using the browser's back button.
 
 | **Feature**            | **Action**           | **Expected Result**          | **Actual Result** |
 | ---------------------- | -------------------- | ---------------------------- | ----------------- |
 | Main navigation        | Visit any page       | Find a link to the home page | Works as expected |
+| Main game (win)        | Win a game           | Find a link to the home page | Works as expected |
+| Main game (lose)       | Lose a game          | Find a link to the home page | Works as expected |
 | Contact form (success) | Submit a valid form  | Find a link to the home page | Works as expected |
 | 404 page               | Enter an invalid URL | Find a link to the home page | Works as expected |
+
+<details><summary>Screenshot 1</summary>
+  <img src="docs/testing/testing__homelink_1.png">
+</details>
+<details><summary>Screenshot 2</summary>
+  <img src="docs/testing/testing__homelink_2.png">
+</details>
+<details><summary>Screenshot 3</summary>
+  <img src="docs/testing/testing__homelink_3.png">
+</details>
+<details><summary>Screenshot 4</summary>
+  <img src="docs/testing/testing__homelink_4.png">
+</details>
+<details><summary>Screenshot 5</summary>
+  <img src="docs/testing/testing__homelink_5.png">
+</details>
 
 ## Bugs
 
