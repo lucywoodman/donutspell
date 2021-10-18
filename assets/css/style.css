@@ -63,11 +63,11 @@
     :root {
         /* Set root font size to 10px for large screens */
         font-size: 62.5%;
-
         --font-size-game: 5.6rem;
     }
 }
 
+/* CSS browser style reset */
 * {
     border: none;
     margin: 0;
@@ -75,6 +75,7 @@
     box-sizing: border-box;
 }
 
+/* Set base styling */
 body {
     font-family: var(--font-body);
     font-size: var(--font-size-md);
@@ -87,9 +88,6 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-}
-
-.wrapper {
     background: url("../images/background.svg") no-repeat bottom center / 120%;
 }
 
@@ -208,7 +206,6 @@ header {
 }
 
 /*|| Main navigation */
-
 nav {
     width: 100%;
 }
@@ -268,7 +265,6 @@ nav {
 }
 
 /* || FOOTER */
-
 footer {
     background: var(--brand-dark-blue);
     padding: 19px 0 10px;
@@ -300,7 +296,6 @@ footer a:hover {
 }
 
 /* || Main Content */
-
 .main {
     max-width: 110rem;
     margin: 0 auto;
