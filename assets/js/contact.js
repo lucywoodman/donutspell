@@ -138,15 +138,16 @@
         if (isFormValid) {
             // Uses the EmailJS API to send the form input.
             emailjs.init("user_e0qnu0neIitMWOhxmH7Yu");
-            emailjs.sendForm('service_x1hrmtx', 'template_lgttxpk', this)
+            emailjs.sendForm('service_x1hrmtx', 'xxxtemplate_lgttxpk', this)
                 .then(function () {
                     // success sending email
+                    // Displays a thank you message.
+                    displayThanks();
                 }, function (error) {
                     // error message
-                    console.log('FAILED...', error);
+                    // Displays an error message.
+                    displayOops();
                 });
-            // Displays a thank you message.
-            displayThanks();
         }
     });
     
@@ -187,6 +188,18 @@
         let html = `
                 <h2>Success!</h2>
                 <p>Your message has been sent. Thank you for getting in touch.</p>
+                <a href="index.html" class="button">Return home</a>
+                `;
+        document.getElementsByClassName('form')[0].innerHTML = html;
+    }
+
+    /**
+     * Replaces the form HTML with a thank you message after the form has been submitted.
+     */
+     function displayOops() {
+        let html = `
+                <h2>Oh no!</h2>
+                <p>There was a problem sending your message. Please try again later.</p>
                 <a href="index.html" class="button">Return home</a>
                 `;
         document.getElementsByClassName('form')[0].innerHTML = html;
