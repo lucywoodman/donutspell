@@ -502,7 +502,7 @@ The website was tested on the following browsers:
   <img src="docs/testing/testing__mobile_7.png">
 </details>
 <details><summary>Screenshot 8</summary>
-  <img src="docs/testing/testing__mobile_7.png">
+  <img src="docs/testing/testing__mobile_8.png">
 </details>
 
 7. As a user, I want confirmation of whether I've won the game and what the correct answer is.
