@@ -43,8 +43,8 @@
     --neutral-grey: #727578;
     --neutral-light-grey: #ebebeb;
     --white: #fffefe;
-    --error-color: red;
-    --success-color: green;
+    --error-color: #b40000;
+    --success-color: #006600;
     
     /* || Sizing */
     --width-xlg: 62rem;
