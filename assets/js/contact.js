@@ -138,7 +138,7 @@
         if (isFormValid) {
             // Uses the EmailJS API to send the form input.
             emailjs.init("user_e0qnu0neIitMWOhxmH7Yu");
-            emailjs.sendForm('service_x1hrmtx', 'xxxtemplate_lgttxpk', this)
+            emailjs.sendForm('service_x1hrmtx', 'template_lgttxpk', this)
                 .then(function () {
                     // success sending email
                     // Displays a thank you message.
