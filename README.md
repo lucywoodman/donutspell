@@ -6,6 +6,8 @@ The words used for the game are common "tricky" to spell words, as set by the UK
 
 [Live webpage](https://lucywoodman.github.io/donutspell/)
 
+![Mockup image](docs/mockup.png)
+
 ## Table of contents
 
 - [Donutspell](#donutspell)
