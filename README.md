@@ -34,8 +34,9 @@ The words used for the game are common "tricky" to spell words, as set by the UK
     - [6. Gameover (lose)](#6-gameover-lose)
     - [7. Contact page](#7-contact-page)
     - [8. Form confirmation page](#8-form-confirmation-page)
-    - [9. 404 page](#9-404-page)
-    - [10. Fully responsive site](#10-fully-responsive-site)
+    - [9. Form error page](#9-form-error-page)
+    - [10. 404 page](#10-404-page)
+    - [11. Fully responsive site](#11-fully-responsive-site)
   - [Technologies used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks and tools](#frameworks-and-tools)
@@ -256,7 +257,15 @@ When the form is successfully submitted, the site displays a success message, al
 
 ![Hero](docs/features/features__contact-success.png)
 
-### 9. 404 page
+### 9. Form error page
+
+When the form cannot be sumbitted due to technical issues, the site displays a friendly error message, along with a button to return to the home page.
+
+- User stories covered: 6, 8, 13
+
+![Hero](docs/features/features__contact-fail.png)
+
+### 10. 404 page
 
 If a user happens upon a page that doesn't exist on the site, they will be shown the 404 page. This explains what happened (Ripley chewed the page, probably), and provides a button to return to the home page.
 
@@ -264,7 +273,7 @@ If a user happens upon a page that doesn't exist on the site, they will be shown
 
 ![Hero](docs/features/features__404.png)
 
-### 10. Fully responsive site
+### 11. Fully responsive site
 
 The site has been built using the mobile first methodology. This means that the base CSS code is for mobile screens, and the media queries build upon that for the larger screen sizes.
 
@@ -468,6 +477,7 @@ The website was tested on the following browsers:
 | Main game (lose)       | Lose a game                                                      | The site to work on a smaller screen | Works as expected |
 | Contact page           | Visit contact page on a mobile device, enter details to the form | The site to work on a smaller screen | Works as expected |
 | Contact page (success) | Submit a valid form                                              | The site to work on a smaller screen | Works as expected |
+| Contact page (fail)    | EmailJS service fails                                            | The site to work on a smaller screen | Works as expected |
 | 404 page               | Trigger a 404                                                    | The site to work on a smaller screen | Works as expected |
 
 <details><summary>Screenshot 1</summary>
@@ -491,6 +501,9 @@ The website was tested on the following browsers:
 <details><summary>Screenshot 7</summary>
   <img src="docs/testing/testing__mobile_7.png">
 </details>
+<details><summary>Screenshot 8</summary>
+  <img src="docs/testing/testing__mobile_7.png">
+</details>
 
 7. As a user, I want confirmation of whether I've won the game and what the correct answer is.
 
@@ -512,6 +525,7 @@ The website was tested on the following browsers:
 | ---------------------- | --------------------------------------------- | --------------------------------------------------------- | ----------------- |
 | Contact page           | Visit contact page, enter details to the form | Feedback from the form that the details entered are valid | Works as expected |
 | Contact page (success) | Submit a valid form                           | Feedback to show form was successfully submitted          | Works as expected |
+| Contact page (fail)    | EmailJS service fails                         | Feedback to show form could not be submitted              | Works as expected |
 
 <details><summary>Screenshot 1</summary>
   <img src="docs/testing/testing__contact_1.png">
@@ -521,6 +535,9 @@ The website was tested on the following browsers:
 </details>
 <details><summary>Screenshot 3</summary>
   <img src="docs/testing/testing__contact_3.png">
+</details>
+<details><summary>Screenshot 4</summary>
+  <img src="docs/testing/testing__contact_4.png">
 </details>
 
 9.  As a site owner, I want to provide a fun and engaging game for users, that has an educational aspect to help teachers/children.
@@ -571,6 +588,7 @@ The website was tested on the following browsers:
 | Main game (win)        | Win a game           | Find a link to the home page | Works as expected |
 | Main game (lose)       | Lose a game          | Find a link to the home page | Works as expected |
 | Contact form (success) | Submit a valid form  | Find a link to the home page | Works as expected |
+| Contact form (fail)    | Submit a valid form  | Find a link to the home page | Works as expected |
 | 404 page               | Enter an invalid URL | Find a link to the home page | Works as expected |
 
 <details><summary>Screenshot 1</summary>
@@ -587,6 +605,9 @@ The website was tested on the following browsers:
 </details>
 <details><summary>Screenshot 5</summary>
   <img src="docs/testing/testing__homelink_5.png">
+</details>
+<details><summary>Screenshot 6</summary>
+  <img src="docs/testing/testing__homelink_6.png">
 </details>
 
 ## Bugs
